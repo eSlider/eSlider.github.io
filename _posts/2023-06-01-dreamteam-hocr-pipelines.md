@@ -35,4 +35,4 @@ Go · PHP · HOCR/OCR · PDF · Docker Compose
 
 ## Follow-on
 
-Public library: [github.com/eSlider/go-hocr](https://github.com/eSlider/go-hocr) — hOCR 1.2 parser with YAML/HTML export.
+Public library: [github.com/eSlider/go-hocr](https://github.com/eSlider/go-hocr) — hOCR 1.2 parser with YAML/HTML export (Jun 2026). See [go-hocr post](/posts/go-hocr-tesseract-parser/).

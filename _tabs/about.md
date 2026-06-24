@@ -9,9 +9,19 @@ order: 5
 
 Hands-on engineer with **10+ years** building and operating backend, data, and cloud systems. Current focus: **knowledge-graph RAG** (Neo4j + Qdrant), **agent-driven delivery automation**, and analytics stacks. Delivered measurable outcomes across ETL platforms, geospatial search, trading backends, and self-hosted AI infrastructure.
 
-**Contact**: [eslider@gmail.com](mailto:eslider@gmail.com) · [GitHub](https://github.com/eSlider) · [produktor.io](https://produktor.io)
+**Contact**: [eslider@gmail.com](mailto:eslider@gmail.com) · [GitHub](https://github.com/eSlider) · [produktor.io](https://produktor.io) · [Website](https://eslider.github.io/)
 
 **Languages**: English B2 · German C1 · Ukrainian C1 · Russian C1
+
+### GitHub portfolio (2026-06-24)
+
+| Metric | Value |
+|--------|------:|
+| Original repositories | **62** |
+| Primary language Go | **21** repos |
+| Active in 2026 | **27** repos |
+
+Recent focus: [go-second-brain](https://github.com/eSlider/go-second-brain), [ai-fabric](https://github.com/eSlider/ai-fabric), [go-onlyoffice](https://github.com/eSlider/go-onlyoffice), [go-hocr](https://github.com/eSlider/go-hocr). See [Projects](/projects/) for the full inventory.
 
 ---
 

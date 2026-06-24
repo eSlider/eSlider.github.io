@@ -20,9 +20,15 @@ pin: true
 
 ## Flagship products (2025–2026)
 
-- [go-second-brain](https://github.com/eSlider/go-second-brain) — knowledge graph RAG
-- [AI Fabric](https://github.com/eSlider/ai-fabric) — agent delivery automation
-- [go-onlyoffice](https://github.com/eSlider/go-onlyoffice) — OnlyOffice API client
+| Repository | Updated | Focus |
+|------------|---------|-------|
+| [go-onlyoffice](https://github.com/eSlider/go-onlyoffice) | 2026-06-24 | `oo` CLI — OnlyOffice + Gitea sync |
+| [go-second-brain](https://github.com/eSlider/go-second-brain) | 2026-06-16 | Knowledge graph RAG |
+| [go-hocr](https://github.com/eSlider/go-hocr) | 2026-06-15 | hOCR / Tesseract parser |
+| [ai-fabric](https://github.com/eSlider/ai-fabric) | 2026-06-14 | Agent delivery automation |
+| [self-ca](https://github.com/eSlider/self-ca) | 2026-06-21 | Private CA web service |
+
+**GitHub**: 62 original repos · 27 active in 2026 · [full inventory](/projects/)
 
 ## Scale
 

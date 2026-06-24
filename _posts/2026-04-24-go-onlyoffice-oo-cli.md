@@ -8,7 +8,7 @@ description: "Go client and CLI for OnlyOffice Project Management API with appli
 
 Go client library and **`oo` CLI** for the OnlyOffice Project Management API — projects, tasks, milestones, calendar, and CRM (companies, contacts, deals).
 
-**Repository**: [github.com/eSlider/go-onlyoffice](https://github.com/eSlider/go-onlyoffice)
+**Repository**: [github.com/eSlider/go-onlyoffice](https://github.com/eSlider/go-onlyoffice) · last push **2026-06-24** (Gitea sync, subject-based CLI in v0.5)
 
 ## Features
 
