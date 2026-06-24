@@ -25,15 +25,16 @@ Full profile: [github.com/eSlider](https://github.com/eSlider)
 | Project | Lang | Updated | Post |
 |---------|------|---------|------|
 | [go-onlyoffice](https://github.com/eSlider/go-onlyoffice) | Go | 2026-06-24 | [`oo` CLI](/posts/go-onlyoffice-oo-cli/) |
+| [self-ca](https://github.com/eSlider/self-ca) | Go | 2026-06-21 | [Self-hosted CA](/posts/self-ca-private-certificates/) |
 | [go-second-brain](https://github.com/eSlider/go-second-brain) | Go | 2026-06-16 | [Knowledge Graph RAG](/posts/go-second-brain-knowledge-graph-rag/) |
 | [go-hocr](https://github.com/eSlider/go-hocr) | Go | 2026-06-15 | [hOCR parser](/posts/go-hocr-tesseract-parser/) |
 | [ai-fabric](https://github.com/eSlider/ai-fabric) | Go | 2026-06-14 | [Agent delivery](/posts/ai-fabric-agent-delivery/) |
-| [self-ca](https://github.com/eSlider/self-ca) | Go | 2026-06-21 | [Self-hosted CA](/posts/self-ca-private-certificates/) |
 | [go-fdp](https://github.com/eSlider/go-fdp) / [go-trade](https://github.com/eSlider/go-trade) | Go | 2026-05-27 | [Finance data proxy](/posts/go-fdp-finance-data-proxy/) |
 | [go-config](https://github.com/eSlider/go-config) | Go | 2026-05-12 | [Go libraries toolkit](/posts/go-libraries-toolkit/) |
-| [bonsai-ollama](https://github.com/eSlider/bonsai-ollama) | Go | 2026-04-22 | — (★2) Ollama proxy for Q1_0 GGUF |
+| [yamd](https://github.com/eSlider/yamd) | JS | 2026-04-30 | [MD+YAML static engine](/posts/yamd-markdown-yaml-engine/) |
+| [bonsai-ollama](https://github.com/eSlider/bonsai-ollama) | Go | 2026-04-22 | [Q1_0 Ollama proxy](/posts/bonsai-ollama-q1-proxy/) |
 | [go-ollama](https://github.com/eSlider/go-ollama) | Go | 2026-04-17 | [Go libraries toolkit](/posts/go-libraries-toolkit/) |
-| [yamd](https://github.com/eSlider/yamd) | JS | 2026-04-30 | — (★1) MD+YAML UI blocks prototype |
+| [nominatim](https://github.com/eSlider/nominatim) | Shell | 2026-03-02 | [Geocoder deploy](/posts/nominatim-geocoder-deploy/) |
 | [mail-archive](https://github.com/eSlider/mail-archive) | Go | 2026-02-15 | [Mail archive](/posts/mail-archive-imap-search/) |
 | [geo-spider-app](https://github.com/eSlider/geo-spider-app) | KMP | 2026-01-04 | [Android GPS tracker](/posts/geo-spider-app-android-gps/) |
 | Trading / Binance sync | Go, React | 2026 | [Trading algorithms](/posts/trading-algorithms-binance-sync/) |
@@ -58,6 +59,20 @@ Reusable modules — see [Go libraries toolkit](/posts/go-libraries-toolkit/) fo
 | [go-keys](https://github.com/eSlider/go-keys) | 0 | RSA PEM utilities |
 | [go-proxy](https://github.com/eSlider/go-proxy) | 0 | Proxy list fetcher |
 | [go-xls](https://github.com/eSlider/go-xls) | 0 | UTF-16 CSV + BIFF `.xls` |
+
+---
+
+## Achievements & experiments
+
+Research prototypes and PoCs — not all have long-form posts yet.
+
+| Project | Lang | Updated | Notes |
+|---------|------|---------|-------|
+| [yamd](https://github.com/eSlider/yamd) | JS | 2026-04-30 | [Post](/posts/yamd-markdown-yaml-engine/) · [live demo](https://eSlider.github.io/yamd/) |
+| [atom-one-light-eslider](https://github.com/eSlider/atom-one-light-eslider) | — | 2026-05-19 | VS Code / Cursor theme with eSlider accents |
+| [crypto-exchange-manager-v2](https://github.com/eSlider/crypto-exchange-manager-v2) | TS | 2026-01-04 | Exchange manager PoC |
+| [speech-to-text-copy-paste](https://github.com/eSlider/speech-to-text-copy-paste) | Python | 2026-01-15 | STT utility experiment |
+| [market-p](https://github.com/eSlider/market-p) | TS | 2025-02-25 | StackBlitz market spike |
 
 ---
 

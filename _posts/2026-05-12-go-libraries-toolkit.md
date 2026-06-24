@@ -4,6 +4,7 @@ date: 2026-05-12 10:00:00 +0000
 categories: [Projects, Programming]
 tags: [Go, Ollama, Matrix, Gitea, Linux, LLM]
 description: "Reusable Go modules — config merge, Ollama client, Matrix bots, Gitea helpers, file/system utilities."
+mermaid: true
 ---
 
 A cluster of **published Go libraries** on [github.com/eSlider](https://github.com/eSlider) — small, composable packages used across produktor.io stacks, AI Fabric, and go-second-brain.

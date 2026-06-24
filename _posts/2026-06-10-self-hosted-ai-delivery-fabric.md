@@ -4,6 +4,7 @@ date: 2026-06-10 10:00:00 +0000
 categories: [Software Architectures, DevOps]
 tags: [Go, Gitea, Docker, LLM, MCP, Microservices, GitHub Actions]
 description: "Issue → agent → CI → PR pipeline design with policy gates and human approval."
+mermaid: true
 ---
 
 Design notes for **[AI Fabric](https://github.com/eSlider/ai-fabric)** — a self-hosted alternative to cloud-only "AI dev tools" that keeps code, issues, and runners on your own Gitea instance.
@@ -20,7 +21,7 @@ Design notes for **[AI Fabric](https://github.com/eSlider/ai-fabric)** — a sel
 ```mermaid
 flowchart LR
   Issue[Gitea Issue] --> Handler[issue-handler]
-  Handler --> Agent[cursor-agent / MCP]
+  Handler --> Agent["cursor-agent / MCP"]
   Agent --> Branch[Feature Branch]
   Branch --> CI[Gitea Actions]
   CI -->|pass| PR[Pull Request]
