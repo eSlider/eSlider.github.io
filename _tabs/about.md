@@ -60,7 +60,7 @@ React · Vue.js · Node.js · Mapbender · WebGIS
 | 2025–present | Senior DevOps/Data Engineer (freelance) | Graph RAG, agent automation, ETL |
 | 2023–2025 | Senior Data Engineer @ Dyvenia | Data pipelines, quality, BI |
 | 2019–2021 | Data Engineer / DevOps @ Immowelt AG | Geospatial backend, AWS migration |
-| 2014–2018 | Senior GIS Developer @ WhereGroup | Mapbender product, 1M+ users |
+| 2014–2018 | Senior GIS Developer @ WhereGroup | Mapbender product — [Digitizer](/posts/mapbender-digitizer-module/), 1M+ users |
 | 2012–2013 | Senior Software Developer @ Keynote SIGOS | Backend, database engineering |
 | 2006–present | Founder @ ProProdukt SL / produktor.io | Own-company product engineering |
 

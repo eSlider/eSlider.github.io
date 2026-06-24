@@ -13,13 +13,14 @@ description: "Senior GIS developer on Mapbender — vis-ui.js, Digitizer, public
 ## Highlights
 
 - Delivered spatial data solutions for public-sector clients serving **1M+ users**
-- Built **vis-ui.js** and **Digitizer** — adopted across Mapbender deployments
+- Built **vis-ui.js** and **[Digitizer](/posts/mapbender-digitizer-module/)** — adopted across Mapbender deployments
 - Contributed to `mapbender/*` and `WhereGroup/*` OSS repos (print, search, layersets, SpatiaLite)
 
 ## Key modules
 
 | Module | Role |
 |--------|------|
+| [mapbender-digitizer](/posts/mapbender-digitizer-module/) | Spatial editing module (**344** commits) |
 | mapbender-print | Print module (~457 commits) |
 | mapbender-starter-search | Search integration (~399 commits) |
 | dbsimm-flimas | Client deployment (Solr, Symfony) |

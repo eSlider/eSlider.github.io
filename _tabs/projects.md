@@ -86,6 +86,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 | [sassc-binaries](https://github.com/eSlider/sassc-binaries) | 12 | Mapbender-era SASS binaries |
 | [spatialite](https://github.com/eSlider/spatialite) | 5 | SpatiaLite binaries + PHP wrapper |
 | [vis-ui.js](https://github.com/eSlider/vis-ui.js) | 1 | [Mapbender UI generator](/posts/vis-ui-js-mapbender/) |
+| [mapbender-digitizer](https://github.com/mapbender/mapbender-digitizer) | 5 | [Digitizer editing module](/posts/mapbender-digitizer-module/) |
 | [geo-tools](https://github.com/eSlider/geo-tools) | 0 | Fast geo data utilities |
 | [itunes-ranking-service](https://github.com/eSlider/itunes-ranking-service) | 1 | iTunes ranking API |
 

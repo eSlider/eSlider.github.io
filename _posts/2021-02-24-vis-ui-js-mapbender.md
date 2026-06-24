@@ -21,7 +21,7 @@ vis-ui.js generates consistent UI components across Mapbender modules — reduci
 
 ## Related work
 
-Built alongside the **Digitizer** editing module and print/search integrations — core product modules adopted across Mapbender installations.
+Built alongside the **[Digitizer](/posts/mapbender-digitizer-module/)** spatial editing module and print/search integrations — core product modules adopted across Mapbender installations.
 
 ## Tech stack
 
