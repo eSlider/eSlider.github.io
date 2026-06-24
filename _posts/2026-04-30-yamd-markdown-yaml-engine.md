@@ -9,7 +9,7 @@ mermaid: true
 
 **yamd** is a client-side **Markdown + YAML** static site engine — no backend, no build step. A folder of `.md` files plus `pages.yml` is the whole stack.
 
-**Repository**: [github.com/eSlider/yamd](https://github.com/eSlider/yamd) · **Live demo**: [eSlider.github.io/yamd/](https://eslider.github.io/yamd/) · last push **2026-04-30** · ★1
+**Repository**: [github.com/eSlider/yamd](https://github.com/eSlider/yamd) · **Live demo**: [eSlider.github.io/yamd/](https://eslider.github.io/yamd/) · last push **2026-06-17** · ★1
 
 ## Why it exists
 
