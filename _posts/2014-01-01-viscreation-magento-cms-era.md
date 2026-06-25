@@ -43,6 +43,6 @@ See also [nominatim deploy](/posts/nominatim-geocoder-deploy/) and [geo-spider-a
 
 ## Related
 
-[GRID GmbH](/posts/grid-gmbh-cms-clients/) · [Pack-Cup freelance](/posts/pack-cup-ecommerce-freelance/) · [produktor.io](/posts/produktor-io-proprodukt/)
+[GRID GmbH](/posts/grid-gmbh-cms-clients/) · [gridfactor.de](https://gridfactor.de/) · [Pack-Cup freelance](/posts/pack-cup-ecommerce-freelance/) · [produktor.io](/posts/produktor-io-proprodukt/)
 
 **Portfolio detail**: [github.com/eSlider/cv — viscreation](https://github.com/eSlider/cv/blob/main/projects/viscreation/overview.md)

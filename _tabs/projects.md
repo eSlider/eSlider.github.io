@@ -108,7 +108,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 | Keynote SIGOS | 2012–2013 | [Backend / RDBMS](/posts/keynote-sigos-backend-databases/) |
 | Dreamteam (client) | 2022–2023 | [HOCR pipelines](/posts/dreamteam-hocr-pipelines/) |
 | VisCreation era | 2006–2022 | [VisCMS / Magento](/posts/viscreation-magento-cms-era/) |
-| GRID GmbH | 2006–2012 | [CMS clients](/posts/grid-gmbh-cms-clients/) |
+| GRID GmbH | 2006–2012 | [CMS clients](/posts/grid-gmbh-cms-clients/) · [gridfactor.de](https://gridfactor.de/) |
 
 ---
 
