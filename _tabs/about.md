@@ -73,6 +73,5 @@ React · Vue.js · Node.js · Mapbender · WebGIS
 
 ## Education & Certificates
 
-- **IT Specialist — Application Development (Fachinformatiker)**: IHK Nuremberg (2006)
+- **IT Specialist — Application Development (Fachinformatiker)**: IHK Nuremberg (2006) — apprenticeship at [D2S/SYSTEMS](https://www.d2s-systems.com/) ([post](/posts/d2s-systems-apprenticeship/), 2003–2006)
 - **Software Developer**: BPS — Best Practice Strategies (2013)
-- **IT Specialist Apprenticeship**: D2S/Systems (2003–2006)

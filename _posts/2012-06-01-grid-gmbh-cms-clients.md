@@ -42,7 +42,7 @@ The agency’s public portfolio at [gridfactor.de](https://gridfactor.de/) lists
 | VisBack | 2006 | PHP web app framework |
 | VisMin / VisCMS | 2007 | Modular CMS on VisBack |
 
-Direct VisCreation clients (not via GRID): Modelagentur.de, Kluge Texte, Lena-Romme. Full era: [VisCreation / Magento](/posts/viscreation-magento-cms-era/).
+Direct VisCreation clients (not via GRID): Modelagentur.de, Kluge Texte, Lena-Romme. Prior training: [D2S/SYSTEMS apprenticeship](/posts/d2s-systems-apprenticeship/). Full era: [VisCreation / Magento](/posts/viscreation-magento-cms-era/).
 
 **Portfolio detail**: [github.com/eSlider/cv — grid-gmbh](https://github.com/eSlider/cv/blob/main/projects/grid-gmbh/overview.md) · [gridfactor project index](https://github.com/eSlider/cv/blob/main/projects/grid-gmbh/gridfactor-portfolio.md)
 

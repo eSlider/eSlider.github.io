@@ -108,6 +108,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 | Keynote SIGOS | 2012–2013 | [Backend / RDBMS](/posts/keynote-sigos-backend-databases/) |
 | Dreamteam (client) | 2022–2023 | [HOCR pipelines](/posts/dreamteam-hocr-pipelines/) |
 | VisCreation era | 2006–2022 | [VisCMS / Magento](/posts/viscreation-magento-cms-era/) |
+| D2S/SYSTEMS apprenticeship | 2001–2006 | [IT apprenticeship](/posts/d2s-systems-apprenticeship/) · [d2s-systems.com](https://www.d2s-systems.com/) |
 | GRID GmbH | 2006–2012 | [CMS clients](/posts/grid-gmbh-cms-clients/) · [gridfactor.de](https://gridfactor.de/) |
 
 ---
