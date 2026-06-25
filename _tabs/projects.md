@@ -72,6 +72,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 |---------|------|---------|-------|
 | [yamd](https://github.com/eSlider/yamd) | JS | 2026-06-17 | [Post](/posts/yamd-markdown-yaml-engine/) · [live demo](https://eSlider.github.io/yamd/) · ★1 |
 | [go-quicktype](https://github.com/eSlider/go-quicktype) | TS | 2026-06-19 | quicktype fork — typed models from JSON/Schema/TS/GraphQL in browser |
+| [aws-gcp-azure](https://github.com/eSlider/aws-gcp-azure) | Python | 2026-06-25 | [Multi-cloud serverless LAMBDA](/posts/multi-cloud-serverless-lambda/) — AWS/GCP/Azure |
 | [carbonyl](https://github.com/eSlider/carbonyl) | Rust | 2026-06-08 | Chromium terminal browser fork — SSH-friendly, tracks M148 stable |
 | [go-microgpt](https://github.com/eSlider/go-microgpt) | Go | 2026-03-14 | MicroGPT rewritten and optimized in Go |
 | [atom-one-light-eslider](https://github.com/eSlider/atom-one-light-eslider) | — | 2026-05-19 | VS Code / Cursor theme with eSlider accents |
@@ -102,7 +103,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 | ProProdukt SL / produktor.io | 2006–present | [Own company](/posts/produktor-io-proprodukt/) · [Platform stack](/posts/produktor-platform-self-hosted-stack/) |
 | NAI / Edelweiss (healthcare) | 2025–present | [Knowledge base + federated chat](/posts/nai-edelweiss-healthcare-knowledge-base/) |
 | Markets Platform | 2024–2025 | [TradePlatform](/posts/markets-platform-tradeplatform/) |
-| Dyvenia | 2023–2025 | [Data pipelines](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/) |
+| Dyvenia | 2023–2025 | [Python data engineering](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/) |
 | Immowelt AG | 2019–2021 | [Geospatial search](/posts/immowelt-geospatial-search/) |
 | WhereGroup / Mapbender | 2014–2018 | [GIS product](/posts/wheregroup-mapbender-gis/) |
 | Keynote SIGOS | 2012–2013 | [Backend / RDBMS](/posts/keynote-sigos-backend-databases/) |
@@ -124,6 +125,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 | Self-hosted AI delivery | [AI Fabric architecture](/posts/self-hosted-ai-delivery-fabric/) |
 | Multi-engine analytics | [Postgres / Timescale / ClickHouse / DuckDB](/posts/analytics-stack-multi-engine/) |
 | Go configuration | [go-config essay](/posts/go-config-many-good-pieces-no-whole-picture/) |
+| Multi-cloud serverless | [LAMBDA on AWS/GCP/Azure](/posts/multi-cloud-serverless-lambda/) |
 | Docker Compose patterns | [Compose stack inventory](/posts/docker-compose-stack-patterns/) |
 
 ---
