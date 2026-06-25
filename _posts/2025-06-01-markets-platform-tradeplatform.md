@@ -26,10 +26,11 @@ description: "~2,000+ commits on trading platform — consumers, APIs, React/MUI
 | `grafana` + `loki` + `promtail` | Observability |
 | `n8n` | Workflow automation |
 | `ws` | WebSocket service |
+| Matrix chat (Illja) | Synapse, Element PWA, coturn — see [WebRTC stacks](/posts/matrix-webrtc-voip-production/) |
 
 ## Tech stack
 
-Go · TypeScript/React · MUI · Kafka-style consumers · PostgreSQL · DuckDB · ClickHouse · MinIO · Grafana · Redis · Sentry
+Go · TypeScript/React · MUI · Kafka-style consumers · PostgreSQL · DuckDB · ClickHouse · MinIO · Grafana · Redis · Sentry · Matrix · WebRTC
 
 ## Related OSS
 

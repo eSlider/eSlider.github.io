@@ -16,7 +16,7 @@ pin: true
 | Phase | Period | Focus |
 |-------|--------|-------|
 | VisCreation era | 2006–2022 | VisBack, VisCMS, Magento e-commerce, direct clients |
-| produktor.io platform | 2021–present | k3s, OnlyOffice, Ollama, AI stack, Gitea |
+| produktor.io platform | 2021–present | k3s, OnlyOffice, Ollama, AI stack, Gitea, Matrix/WebRTC |
 
 ## Flagship products (2025–2026)
 
@@ -36,7 +36,11 @@ pin: true
 
 ## Stack highlights
 
-Go · PHP · Magento · k3s · OnlyOffice · MinIO · Gitea · Ollama · Grafana/Loki · PostgreSQL
+Go · PHP · Magento · k3s · OnlyOffice · MinIO · Gitea · Ollama · Grafana/Loki · PostgreSQL · Matrix · LiveKit · Jitsi · coturn
+
+## Real-time communications
+
+Federated **Matrix** homeservers with **Element**, **coturn**, **LiveKit** (MatrixRTC), and **Jitsi Meet** for on-prem conferences. Operated across produktor.io, partner, and healthcare client homeservers. See [Matrix / WebRTC / VoIP](/posts/matrix-webrtc-voip-production/).
 
 ## Note
 

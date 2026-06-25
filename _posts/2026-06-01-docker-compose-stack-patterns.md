@@ -22,6 +22,7 @@ Inventory-driven notes from **52 canonical Compose stacks** on the local worksta
 | Gitea | 5 |
 | OnlyOffice | 6 |
 | Matrix / Synapse | 5 |
+| coturn / LiveKit / Jitsi | 3+ (RTC stacks) |
 
 ## Pattern 1 — Observability sidecar trio
 
@@ -55,6 +56,16 @@ Used in: [trading sync](/posts/trading-algorithms-binance-sync/), Markets Platfo
 
 **PostGIS + tileserver + nginx/php** — Mapbender and produktor geo stacks. See [WhereGroup](/posts/wheregroup-mapbender-gis/) and [Immowelt](/posts/immowelt-geospatial-search/).
 
+## Pattern 6 — Matrix chat + WebRTC media plane
+
+**Synapse + Element + coturn** is the baseline; **LiveKit + lk-jwt** adds MatrixRTC (Element Call / Element X group calls). Optional **Jitsi Meet** profile for on-prem conference rooms.
+
+- [Matrix / WebRTC / VoIP](/posts/matrix-webrtc-voip-production/) — three federated orgs, WAN port-forward tables, ICE debugging
+- [go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) — Matrix bot + voice on the same homeserver
+- Markets Platform Illja contract — Element PWA + Synapse + coturn
+
+Operational habit: keep coturn `external-ip` and LiveKit `rtc.node_ip` on the **same WAN egress**; publish UDP relay ranges on the router, not only TCP 443.
+
 ## Operational habits
 
 - One `compose.yml` per product — avoid mega-compose with 30 unrelated services
@@ -64,4 +75,4 @@ Used in: [trading sync](/posts/trading-algorithms-binance-sync/), Markets Platfo
 
 ## Related stacks
 
-[produktor.io](/posts/produktor-io-proprodukt/) · [AI Fabric](/posts/self-hosted-ai-delivery-fabric/) · [Analytics stack](/posts/analytics-stack-multi-engine/)
+[produktor.io](/posts/produktor-io-proprodukt/) · [AI Fabric](/posts/self-hosted-ai-delivery-fabric/) · [Analytics stack](/posts/analytics-stack-multi-engine/) · [Matrix / WebRTC](/posts/matrix-webrtc-voip-production/)

@@ -37,3 +37,7 @@ Self-hosted **second brain** platform: a Markdown knowledge base flows into a **
 ## Tech stack
 
 Go · Neo4j (Cypher) · Qdrant · Ollama · Matrix · Docker Compose
+
+## Related
+
+[Matrix / WebRTC / VoIP production stacks](/posts/matrix-webrtc-voip-production/) · [produktor.io](/posts/produktor-io-proprodukt/)

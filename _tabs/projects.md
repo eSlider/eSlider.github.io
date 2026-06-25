@@ -27,6 +27,7 @@ Full profile: [github.com/eSlider](https://github.com/eSlider)
 | [go-onlyoffice](https://github.com/eSlider/go-onlyoffice) | Go | 2026-06-24 | [`oo` CLI](/posts/go-onlyoffice-oo-cli/) |
 | [self-ca](https://github.com/eSlider/self-ca) | Go | 2026-06-21 | [Self-hosted CA](/posts/self-ca-private-certificates/) |
 | [go-second-brain](https://github.com/eSlider/go-second-brain) | Go | 2026-06-16 | [Knowledge Graph RAG](/posts/go-second-brain-knowledge-graph-rag/) |
+| Matrix / WebRTC / VoIP (produktor chat) | Docker | 2024–present | [Production voice stacks](/posts/matrix-webrtc-voip-production/) |
 | [go-hocr](https://github.com/eSlider/go-hocr) | Go | 2026-06-15 | [hOCR parser](/posts/go-hocr-tesseract-parser/) |
 | [ai-fabric](https://github.com/eSlider/ai-fabric) | Go | 2026-06-14 | [Agent delivery](/posts/ai-fabric-agent-delivery/) |
 | [go-fdp](https://github.com/eSlider/go-fdp) / [go-trade](https://github.com/eSlider/go-trade) | Go | 2026-05-27 | [Finance data proxy](/posts/go-fdp-finance-data-proxy/) |
@@ -110,6 +111,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 
 | Topic | Post |
 |-------|------|
+| Matrix / WebRTC / VoIP | [Production voice & video stacks](/posts/matrix-webrtc-voip-production/) |
 | Self-hosted AI delivery | [AI Fabric architecture](/posts/self-hosted-ai-delivery-fabric/) |
 | Multi-engine analytics | [Postgres / Timescale / ClickHouse / DuckDB](/posts/analytics-stack-multi-engine/) |
 | Docker Compose patterns | [Compose stack inventory](/posts/docker-compose-stack-patterns/) |

@@ -7,7 +7,7 @@ order: 5
 
 **Andriy Oblivantsev** — Senior Software Engineer (Backend / Data / DevOps) based in **Santa Cruz de Tenerife, Spain** (remote-friendly, CET).
 
-Hands-on engineer with **10+ years** building and operating backend, data, and cloud systems. Current focus: **knowledge-graph RAG** (Neo4j + Qdrant), **agent-driven delivery automation**, and analytics stacks. Delivered measurable outcomes across ETL platforms, geospatial search, trading backends, and self-hosted AI infrastructure.
+Hands-on engineer with **10+ years** building and operating backend, data, and cloud systems. Current focus: **knowledge-graph RAG** (Neo4j + Qdrant), **production WebRTC/voice** (Matrix, LiveKit, Jitsi, coturn), **agent-driven delivery automation**, and analytics stacks. Delivered measurable outcomes across ETL platforms, geospatial search, trading backends, and self-hosted AI infrastructure.
 
 **Contact**: [eslider@gmail.com](mailto:eslider@gmail.com) · [GitHub](https://github.com/eSlider) · [produktor.io](https://produktor.io) · [Website](https://eslider.github.io/)
 
@@ -43,6 +43,10 @@ PostgreSQL/PostGIS · TimescaleDB · ClickHouse · DuckDB · Neo4j · Qdrant · 
 
 Grafana · Loki · Promtail · Prometheus · Sentry · n8n
 
+### Real-time voice / video
+
+WebRTC · TURN/STUN (coturn) · LiveKit SFU · Jitsi Meet · Matrix VoIP / MatrixRTC · Element · on-prem meet setups (NAT, ICE, relay ports)
+
 ### AI & automation
 
 RAG · knowledge graphs · vLLM · Ollama · MCP · agent orchestration · OCR · GDPR-aware data handling
@@ -57,7 +61,7 @@ React · Vue.js · Node.js · Mapbender · WebGIS
 
 | Period | Role | Focus |
 |--------|------|-------|
-| 2025–present | Senior DevOps/Data Engineer (freelance) | Graph RAG, agent automation, ETL |
+| 2025–present | Senior DevOps/Data Engineer (freelance) | Graph RAG, WebRTC/voice stacks, agent automation, ETL |
 | 2023–2025 | Senior Data Engineer @ Dyvenia | Data pipelines, quality, BI |
 | 2019–2021 | Data Engineer / DevOps @ Immowelt AG | Geospatial backend, AWS migration |
 | 2014–2018 | Senior GIS Developer @ WhereGroup | Mapbender product — [Digitizer](/posts/mapbender-digitizer-module/), 1M+ users |
