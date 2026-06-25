@@ -31,7 +31,7 @@ Full profile: [github.com/eSlider](https://github.com/eSlider)
 | [go-hocr](https://github.com/eSlider/go-hocr) | Go | 2026-06-15 | [hOCR parser](/posts/go-hocr-tesseract-parser/) |
 | [ai-fabric](https://github.com/eSlider/ai-fabric) | Go | 2026-06-14 | [Agent delivery](/posts/ai-fabric-agent-delivery/) |
 | [go-fdp](https://github.com/eSlider/go-fdp) / [go-trade](https://github.com/eSlider/go-trade) | Go | 2026-05-27 | [Finance data proxy](/posts/go-fdp-finance-data-proxy/) |
-| [go-config](https://github.com/eSlider/go-config) | Go | 2026-05-12 | [Go libraries toolkit](/posts/go-libraries-toolkit/) |
+| [go-config](https://github.com/eSlider/go-config) | Go | 2026-05-12 | [Config essay (2026-05-02)](/posts/go-config-many-good-pieces-no-whole-picture/) · [Medium](https://medium.com/@andreyoblivantsev/go-config-many-good-pieces-no-whole-picture-039ec77193be) |
 | [yamd](https://github.com/eSlider/yamd) | JS | 2026-06-17 | [MD+YAML static engine](/posts/yamd-markdown-yaml-engine/) |
 | [bonsai-ollama](https://github.com/eSlider/bonsai-ollama) | Go | 2026-04-22 | [Q1_0 Ollama proxy](/posts/bonsai-ollama-q1-proxy/) |
 | [go-ollama](https://github.com/eSlider/go-ollama) | Go | 2026-04-17 | [Go libraries toolkit](/posts/go-libraries-toolkit/) |
@@ -49,7 +49,7 @@ Reusable modules — see [Go libraries toolkit](/posts/go-libraries-toolkit/) fo
 
 | Repository | ★ | Description |
 |------------|--:|-------------|
-| [go-config](https://github.com/eSlider/go-config) | 1 | Env/YAML/INI/JSON ↔ structs; CLI |
+| [go-config](https://github.com/eSlider/go-config) | 1 | Env/YAML/INI/JSON ↔ structs; CLI — [essay](/posts/go-config-many-good-pieces-no-whole-picture/) |
 | [go-ollama](https://github.com/eSlider/go-ollama) | 2 | Ollama + Open WebUI streaming client |
 | [bonsai-ollama](https://github.com/eSlider/bonsai-ollama) | 2 | PrismML Bonsai Q1_0 via llama-server |
 | [go-fdp](https://github.com/eSlider/go-fdp) | 1 | Binance S3 → DuckDB/Parquet API |
@@ -102,7 +102,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 | ProProdukt SL / produktor.io | 2006–present | [Own company](/posts/produktor-io-proprodukt/) · [Platform stack](/posts/produktor-platform-self-hosted-stack/) |
 | NAI / Edelweiss (healthcare) | 2025–present | [Knowledge base + federated chat](/posts/nai-edelweiss-healthcare-knowledge-base/) |
 | Markets Platform | 2024–2025 | [TradePlatform](/posts/markets-platform-tradeplatform/) |
-| Dyvenia | 2023–2025 | [Data pipelines](/posts/dyvenia-data-engineering/) |
+| Dyvenia | 2023–2025 | [Data pipelines](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/) |
 | Immowelt AG | 2019–2021 | [Geospatial search](/posts/immowelt-geospatial-search/) |
 | WhereGroup / Mapbender | 2014–2018 | [GIS product](/posts/wheregroup-mapbender-gis/) |
 | Keynote SIGOS | 2012–2013 | [Backend / RDBMS](/posts/keynote-sigos-backend-databases/) |
@@ -123,6 +123,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 | AI bot lineage | [eSliderbot → vidarr → RAG](/posts/esliderbot-telegram-llm-precursor/) |
 | Self-hosted AI delivery | [AI Fabric architecture](/posts/self-hosted-ai-delivery-fabric/) |
 | Multi-engine analytics | [Postgres / Timescale / ClickHouse / DuckDB](/posts/analytics-stack-multi-engine/) |
+| Go configuration | [go-config essay](/posts/go-config-many-good-pieces-no-whole-picture/) |
 | Docker Compose patterns | [Compose stack inventory](/posts/docker-compose-stack-patterns/) |
 
 ---

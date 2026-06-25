@@ -5,73 +5,84 @@ order: 5
 
 ## About
 
-**Andriy Oblivantsev** — Senior Software Engineer (Backend / Data / DevOps) based in **Santa Cruz de Tenerife, Spain** (remote-friendly, CET).
+**Andriy Oblivantsev** — senior backend and data engineer in **Santa Cruz de Tenerife, Spain** (remote-friendly, **CET**).
 
-Hands-on engineer with **10+ years** building and operating backend, data, and cloud systems. Current focus: **knowledge-graph RAG** (Neo4j + Qdrant), **production WebRTC/voice** (Matrix, LiveKit, Jitsi, coturn), **agent-driven delivery automation**, and analytics stacks. Delivered measurable outcomes across ETL platforms, geospatial search, trading backends, and self-hosted AI infrastructure.
+Software since **2001** (IT apprenticeship in Nuremberg); **20+ years** shipping web, GIS, data platforms, and self-hosted infrastructure. The through-line is the same problem in different eras: **turn messy sources into reliable, observable systems** — PHP/CMS and Flash client sites, Java/Oracle backends, **Mapbender** geoportals, **Go/PostGIS** marketplace search, **Python/k8s/dbt** enterprise ETL, and today **Graph RAG + production voice** on Matrix under [produktor.io](https://produktor.io).
 
-**Contact**: [eslider@gmail.com](mailto:eslider@gmail.com) · [GitHub](https://github.com/eSlider) · [produktor.io](https://produktor.io) · [Website](https://eslider.github.io/)
+**Contact**: [eslider@gmail.com](mailto:eslider@gmail.com) · [GitHub](https://github.com/eSlider) · [produktor.io](https://produktor.io)
 
 **Languages**: English B2 · German C1 · Ukrainian C1 · Russian C1
 
-### GitHub portfolio (2026-06-24)
+---
 
-| Metric | Value |
-|--------|------:|
-| Original repositories | **62** |
-| Primary language Go | **21** repos |
-| Active in 2026 | **27** repos |
+## Now (2025–2026)
 
-Recent focus: [go-second-brain](https://github.com/eSlider/go-second-brain), [ai-fabric](https://github.com/eSlider/ai-fabric), [go-onlyoffice](https://github.com/eSlider/go-onlyoffice), [go-hocr](https://github.com/eSlider/go-hocr). See [Projects](/projects/) for the full inventory.
+Freelance via **[ProProdukt SL](https://eslider.github.io/posts/produktor-io-proprodukt/)** — own company, parallel to employment history above. Current build focus:
+
+| Area | What | Read more |
+|------|------|-----------|
+| **Knowledge RAG** | Markdown → Neo4j + Qdrant → Matrix bot / voice | [go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) |
+| **Voice / WebRTC** | Synapse, coturn, LiveKit, Jitsi — ~2 years production across 3 orgs | [Matrix / VoIP](/posts/matrix-webrtc-voip-production/) |
+| **Agent delivery** | Gitea issues → PR automation, Telegram | [ai-fabric](/posts/ai-fabric-agent-delivery/) |
+| **Platform ops** | k3s, OnlyOffice, Gitea, Ollama, Grafana/Loki | [produktor stack](/posts/produktor-platform-self-hosted-stack/) |
+| **Go libraries** | Config merge, OnlyOffice `oo` CLI, hOCR, Ollama clients | [toolkit](/posts/go-libraries-toolkit/) · [go-config essay](/posts/go-config-many-good-pieces-no-whole-picture/) |
+
+**Writing**: [Go config: many good pieces, no whole picture](https://medium.com/@andreyoblivantsev/go-config-many-good-pieces-no-whole-picture-039ec77193be) (Medium, **2026-05-02**) — why nested Go config needs an explicit map-in-the-middle; ties to [go-config](https://github.com/eSlider/go-config).
+
+Repo inventory and metrics: [**Projects**](/projects/) tab (**62** original repos on GitHub, **21** Go, **28** active in 2026).
 
 ---
 
-## Technical Skills
+## Career arc
+
+| Period | Engagement | Focus | Story |
+|--------|------------|-------|-------|
+| 2025–present | **Freelance** (ProProdukt SL) | Graph RAG, WebRTC, agents, trading | [produktor.io](/posts/produktor-io-proprodukt/) |
+| 2024–2025 | **Markets Platform** (contract) | TradePlatform backend (~2k commits) | [Markets Platform](/posts/markets-platform-tradeplatform/) |
+| 2023–2025 | **Dyvenia** (employee) | Atttiva/IDflow, k8s, dbt, data quality | [Dyvenia](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/) |
+| 2019–2021 | **Immowelt AG** (employee) | Go geosearch 80M+ addresses, AWS serverless | [Immowelt](/posts/immowelt-geospatial-search/) |
+| 2014–2018 | **WhereGroup** (employee) | **Mapbender** product — Digitizer, 1M+ users | [WhereGroup](/posts/wheregroup-mapbender-gis/) |
+| 2012–2013 | **Keynote SIGOS** (employee) | Java, Oracle/MySQL/PostgreSQL backends | [SIGOS](/posts/keynote-sigos-backend-databases/) |
+| 2006–2012 | **GRID** subcontractor | PHP/CMS via VisBack/VisCMS — 50+ client sites | [GRID](/posts/grid-gmbh-cms-clients/) · [gridfactor.de](https://gridfactor.de/) |
+| 2006–present | **ProProdukt SL** (own company) | VisCreation → produktor.io — always parallel | [VisCreation era](/posts/viscreation-magento-cms-era/) |
+
+Other client work: [Pack und Cup](/posts/pack-cup-ecommerce-freelance/) (2016–2023) · [Dreamteam HOCR](/posts/dreamteam-hocr-pipelines/) (2022–2023) · [NAI / Edelweiss healthcare](/posts/nai-edelweiss-healthcare-knowledge-base/) (2025–present).
+
+---
+
+## Technical skills
 
 ### Languages
 
-Go · Python · TypeScript/JavaScript · C#/.NET · PHP · Java · Kotlin · Bash · SQL · HTML · CSS
+Go · Python · TypeScript/JavaScript · C#/.NET · PHP · Java · Kotlin · Bash · SQL
 
-### Cloud & DevOps
+### Data & pipelines
 
-AWS (Lambda, ECS, Fargate, S3) · Kubernetes · Docker / Docker Compose · Terraform · GitHub Actions · Linux
+PostgreSQL/PostGIS · TimescaleDB · ClickHouse · DuckDB · Neo4j · Qdrant · Redis · Kafka · dbt · Parquet · Oracle · MinIO
 
-### Data
+### Cloud & platform
 
-PostgreSQL/PostGIS · TimescaleDB · ClickHouse · DuckDB · Neo4j · Qdrant · MySQL · MongoDB · Redis · Elasticsearch · Kafka · Oracle · MinIO
+AWS (Lambda, ECS, Fargate) · Kubernetes · Docker / Compose · Terraform · GitHub Actions · Linux · Azure (client work)
 
-### Observability & automation
+### Observability
 
 Grafana · Loki · Promtail · Prometheus · Sentry · n8n
 
 ### Real-time voice / video
 
-WebRTC · TURN/STUN (coturn) · LiveKit SFU · Jitsi Meet · Matrix VoIP / MatrixRTC · Element · on-prem meet setups (NAT, ICE, relay ports)
+WebRTC · coturn (TURN/STUN) · LiveKit · Jitsi · Matrix VoIP / MatrixRTC · Element
 
 ### AI & automation
 
-RAG · knowledge graphs · vLLM · Ollama · MCP · agent orchestration · OCR · GDPR-aware data handling
+RAG · knowledge graphs · Ollama · agent orchestration (AI Fabric) · OCR/hOCR · GDPR-aware handling
 
 ### Web & GIS
 
-React · Vue.js · Node.js · Mapbender · WebGIS
+React · Vue.js · Mapbender · WebGIS · Node.js
 
 ---
 
-## Career Highlights
-
-| Period | Role | Focus |
-|--------|------|-------|
-| 2025–present | Senior DevOps/Data Engineer (freelance) | Graph RAG, WebRTC/voice stacks, agent automation, ETL |
-| 2024–2025 | Backend / platform engineer @ Markets Platform | TradePlatform (~2,000+ commits, contract) |
-| 2023–2025 | Senior Data Engineer @ Dyvenia | Data pipelines, quality, BI |
-| 2019–2021 | Data Engineer / DevOps @ Immowelt AG | Geospatial backend, AWS migration |
-| 2014–2018 | Senior GIS Developer @ WhereGroup | Mapbender product — [Digitizer](/posts/mapbender-digitizer-module/), 1M+ users |
-| 2012–2013 | Senior Software Developer @ Keynote SIGOS | Backend, database engineering |
-| 2006–present | Founder @ ProProdukt SL / produktor.io | Own-company product engineering |
-
----
-
-## Education & Certificates
+## Education
 
 - **IT Specialist — Application Development (Fachinformatiker)**: IHK Nuremberg (2006) — apprenticeship at [D2S/SYSTEMS](https://www.d2s-systems.com/) ([post](/posts/d2s-systems-apprenticeship/), 2003–2006)
 - **Software Developer**: BPS — Best Practice Strategies (2013)

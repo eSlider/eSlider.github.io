@@ -15,7 +15,7 @@ A cluster of **published Go libraries** on [github.com/eSlider](https://github.c
 
 | Repository | Last push | ★ | Role |
 |------------|-----------|--:|------|
-| [go-config](https://github.com/eSlider/go-config) | 2026-05-12 | 1 | Env/YAML/INI/JSON ↔ Go structs; multi-source merge; CLI |
+| [go-config](https://github.com/eSlider/go-config) | 2026-05-12 | 1 | Env/YAML/INI/JSON ↔ Go structs; multi-source merge; CLI — [essay (2026-05-02)](/posts/go-config-many-good-pieces-no-whole-picture/) |
 | [go-ollama](https://github.com/eSlider/go-ollama) | 2026-04-17 | 2 | Ollama + Open WebUI streaming; token callbacks; code block extraction |
 | [go-matrix-bot](https://github.com/eSlider/go-matrix-bot) | 2026-02-13 | 0 | Matrix bots: E2E, Ollama, Gitea, OnlyOffice hooks |
 | [go-gitea-helpers](https://github.com/eSlider/go-gitea-helpers) | 2026-02-13 | 0 | Gitea API pagination (repos, issues, milestones) |
@@ -36,7 +36,7 @@ flowchart TB
   matrix_bot --> second_brain[go-second-brain]
 ```
 
-- **go-config** — shared configuration layer (same pattern as `godotenv` + struct tags across services)
+- **go-config** — shared configuration layer; design rationale in [Medium essay (2026-05-02)](/posts/go-config-many-good-pieces-no-whole-picture/)
 - **go-ollama** + **go-matrix-bot** — power Matrix RAG bots in [go-second-brain](/posts/go-second-brain-knowledge-graph-rag/)
 - **go-gitea-helpers** — pagination for [AI Fabric](/posts/ai-fabric-agent-delivery/) issue handler
 
