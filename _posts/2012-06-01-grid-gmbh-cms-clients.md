@@ -28,7 +28,9 @@ description: "Subcontractor for GRID agency — PHP/MySQL microsites, Flash camp
 | VisBack | 2006 | PHP web app framework |
 | VisMin / VisCMS | 2007 | Modular CMS on VisBack |
 
-Direct VisCreation clients (not via GRID): Modelagentur.de, Kluge Texte, Lena-Romme.
+Direct VisCreation clients (not via GRID): Modelagentur.de, Kluge Texte, Lena-Romme. Full era: [VisCreation / Magento](/posts/viscreation-magento-cms-era/).
+
+**Portfolio detail**: [github.com/eSlider/cv — grid-gmbh](https://github.com/eSlider/cv/blob/main/projects/grid-gmbh/overview.md)
 
 ## Tech stack
 

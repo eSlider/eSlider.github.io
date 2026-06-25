@@ -36,6 +36,7 @@ Full profile: [github.com/eSlider](https://github.com/eSlider)
 | [bonsai-ollama](https://github.com/eSlider/bonsai-ollama) | Go | 2026-04-22 | [Q1_0 Ollama proxy](/posts/bonsai-ollama-q1-proxy/) |
 | [go-ollama](https://github.com/eSlider/go-ollama) | Go | 2026-04-17 | [Go libraries toolkit](/posts/go-libraries-toolkit/) |
 | [nominatim](https://github.com/eSlider/nominatim) | Shell | 2026-03-02 | [Geocoder deploy](/posts/nominatim-geocoder-deploy/) |
+| [inventar / docs](https://github.com/eSlider/inventar) | — | 2026-04 | [ADR governance](/posts/inventar-docs-governance/) |
 | [mail-archive](https://github.com/eSlider/mail-archive) | Go | 2026-02-15 | [Mail archive](/posts/mail-archive-imap-search/) |
 | [geo-spider-app](https://github.com/eSlider/geo-spider-app) | KMP | 2026-01-04 | [Android GPS tracker](/posts/geo-spider-app-android-gps/) |
 | Trading / Binance sync | Go, React | 2026 | [Trading algorithms](/posts/trading-algorithms-binance-sync/) |
@@ -97,12 +98,16 @@ Research prototypes and PoCs — not all have long-form posts yet.
 
 | Engagement | Period | Post |
 |------------|--------|------|
-| ProProdukt SL / produktor.io | 2006–present | [Own company](/posts/produktor-io-proprodukt/) |
+| Pack und Cup GmbH (freelance) | 2016–2023 | [E-commerce client](/posts/pack-cup-ecommerce-freelance/) |
+| ProProdukt SL / produktor.io | 2006–present | [Own company](/posts/produktor-io-proprodukt/) · [Platform stack](/posts/produktor-platform-self-hosted-stack/) |
+| NAI / Edelweiss (healthcare) | 2025–present | [Knowledge base + federated chat](/posts/nai-edelweiss-healthcare-knowledge-base/) |
 | Markets Platform | 2024–2025 | [TradePlatform](/posts/markets-platform-tradeplatform/) |
 | Dyvenia | 2023–2025 | [Data pipelines](/posts/dyvenia-data-engineering/) |
 | Immowelt AG | 2019–2021 | [Geospatial search](/posts/immowelt-geospatial-search/) |
 | WhereGroup / Mapbender | 2014–2018 | [GIS product](/posts/wheregroup-mapbender-gis/) |
+| Keynote SIGOS | 2012–2013 | [Backend / RDBMS](/posts/keynote-sigos-backend-databases/) |
 | Dreamteam (client) | 2022–2023 | [HOCR pipelines](/posts/dreamteam-hocr-pipelines/) |
+| VisCreation era | 2006–2022 | [VisCMS / Magento](/posts/viscreation-magento-cms-era/) |
 | GRID GmbH | 2006–2012 | [CMS clients](/posts/grid-gmbh-cms-clients/) |
 
 ---
@@ -112,6 +117,9 @@ Research prototypes and PoCs — not all have long-form posts yet.
 | Topic | Post |
 |-------|------|
 | Matrix / WebRTC / VoIP | [Production voice & video stacks](/posts/matrix-webrtc-voip-production/) |
+| Platform engineering | [produktor.io k3s / office / AI](/posts/produktor-platform-self-hosted-stack/) |
+| Architecture governance | [Inventar & ADR docs](/posts/inventar-docs-governance/) |
+| AI bot lineage | [eSliderbot → vidarr → RAG](/posts/esliderbot-telegram-llm-precursor/) |
 | Self-hosted AI delivery | [AI Fabric architecture](/posts/self-hosted-ai-delivery-fabric/) |
 | Multi-engine analytics | [Postgres / Timescale / ClickHouse / DuckDB](/posts/analytics-stack-multi-engine/) |
 | Docker Compose patterns | [Compose stack inventory](/posts/docker-compose-stack-patterns/) |

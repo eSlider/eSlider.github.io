@@ -41,3 +41,5 @@ Go · Neo4j (Cypher) · Qdrant · Ollama · Matrix · Docker Compose
 ## Related
 
 [Matrix / WebRTC / VoIP production stacks](/posts/matrix-webrtc-voip-production/) · [produktor.io](/posts/produktor-io-proprodukt/)
+
+**Portfolio detail**: [github.com/eSlider/cv — go-second-brain](https://github.com/eSlider/cv/blob/main/projects/go-second-brain/overview.md)

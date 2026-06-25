@@ -62,6 +62,7 @@ React · Vue.js · Node.js · Mapbender · WebGIS
 | Period | Role | Focus |
 |--------|------|-------|
 | 2025–present | Senior DevOps/Data Engineer (freelance) | Graph RAG, WebRTC/voice stacks, agent automation, ETL |
+| 2024–2025 | Backend / platform engineer @ Markets Platform | TradePlatform (~2,000+ commits, contract) |
 | 2023–2025 | Senior Data Engineer @ Dyvenia | Data pipelines, quality, BI |
 | 2019–2021 | Data Engineer / DevOps @ Immowelt AG | Geospatial backend, AWS migration |
 | 2014–2018 | Senior GIS Developer @ WhereGroup | Mapbender product — [Digitizer](/posts/mapbender-digitizer-module/), 1M+ users |
