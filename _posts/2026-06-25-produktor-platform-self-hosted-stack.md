@@ -1,6 +1,6 @@
 ---
 title: "produktor.io Platform — Self-Hosted k3s, Office & AI Stack"
-date: 2026-06-26 10:00:00 +0000
+date: 2026-06-25 10:00:00 +0000
 categories: [Companies, Software Architectures, DevOps]
 tags: [Kubernetes, OnlyOffice, Ollama, Gitea, Docker, Matrix, Go]
 description: "Current ProProdukt SL infra: k3s, OnlyOffice, Ollama, Gitea orange stacks, Matrix/WebRTC, 19+ compose stacks."

@@ -1,6 +1,6 @@
 ---
 title: "NAI / Edelweiss — Healthcare Knowledge Base & Federated Chat"
-date: 2026-06-26 10:00:00 +0000
+date: 2026-06-25 10:00:00 +0000
 categories: [Projects, Software Architectures]
 tags: [Healthcare, Neo4j, Qdrant, Matrix, WebRTC, WebDAV, RAG]
 description: "DemoCare / pflege knowledge-base tooling, go-second-brain, and federated Matrix homeservers for healthcare partners."
