@@ -88,16 +88,31 @@
   max-width: none !important;
 }
 
+.mermaid-figure.is-width-fit .mermaid-inner svg {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+}
+
 .mermaid-inner svg {
   display: block !important;
-  max-width: none !important;
   max-height: none !important;
   shape-rendering: geometricPrecision;
   text-rendering: geometricPrecision;
 }
 
-.post-content .mermaid-figure .mermaid-inner svg,
-.post-content .mermaid-figure pre.mermaid svg {
+.mermaid-figure:not(.is-width-fit) .mermaid-inner svg {
+  max-width: none !important;
+}
+
+.post-content .mermaid-figure.is-width-fit .mermaid-inner svg,
+.post-content .mermaid-figure.is-width-fit pre.mermaid svg {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.post-content .mermaid-figure:not(.is-width-fit) .mermaid-inner svg,
+.post-content .mermaid-figure:not(.is-width-fit) pre.mermaid svg {
   max-width: none !important;
 }
 

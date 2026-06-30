@@ -91,12 +91,27 @@
     return svg;
   }
 
-  /** Pan only — zoom is applied by resizing the SVG so text stays vector-crisp. */
-  function applyView(stage, state) {
+  /** Pan only — zoom uses explicit SVG pixels; width-fit uses responsive CSS. */
+  function applyView(stage, state, fitOptions) {
+    const figure = stage.closest('.mermaid-figure');
     const inner = stage.querySelector('.mermaid-inner');
     const svg = inner && inner.querySelector('svg');
     if (!inner || !svg || !state.baseW || !state.baseH) {
       return;
+    }
+
+    if (state.autoFit && fitOptions && fitOptions.mode === 'width') {
+      if (figure) {
+        figure.classList.add('is-width-fit');
+      }
+      svg.style.removeProperty('width');
+      svg.style.removeProperty('height');
+      inner.style.transform = 'translate(' + state.x + 'px, ' + state.y + 'px)';
+      return;
+    }
+
+    if (figure) {
+      figure.classList.remove('is-width-fit');
     }
 
     const width = Math.max(1, Math.round(state.baseW * state.scale));
@@ -132,7 +147,7 @@
     state.x = 0;
     state.y = 0;
     state.autoFit = true;
-    applyView(stage, state);
+    applyView(stage, state, fitOptions);
   }
 
   function bindResize(stage, state, fitOptions) {
@@ -182,7 +197,7 @@
       state.autoFit = false;
       state.x = origX + dx;
       state.y = origY + dy;
-      applyView(stage, state);
+      applyView(stage, state, null);
     });
 
     function endDrag(event) {
@@ -220,14 +235,15 @@
         state.autoFit = false;
         state.scale = Math.max(ZOOM_MIN, state.scale - ZOOM_STEP);
       } else if (action === 'reset') {
-        state.scale = 1;
         state.x = 0;
         state.y = 0;
-        applyView(stage, state);
         if (options.fit) {
           requestAnimationFrame(function () {
             fitToStage(stage, state, options.fitOptions);
           });
+        } else {
+          state.scale = 1;
+          applyView(stage, state, null);
         }
         return;
       } else if (action === 'fullscreen') {
@@ -237,7 +253,7 @@
         options.onExpand();
         return;
       }
-      applyView(stage, state);
+      applyView(stage, state, state.autoFit ? options.fitOptions : null);
     });
   }
 
@@ -373,12 +389,14 @@
     const fitOptions = options.fitOptions || { mode: 'width', allowUpscale: false };
 
     if (options.fit) {
-      requestAnimationFrame(function () {
+      const runFit = function () {
         fitToStage(stage, state, fitOptions);
         bindResize(stage, state, fitOptions);
-      });
+      };
+      requestAnimationFrame(runFit);
+      setTimeout(runFit, 50);
     } else {
-      applyView(stage, state);
+      applyView(stage, state, null);
     }
 
     bindPan(stage, state);
@@ -472,8 +490,19 @@
     });
   }
 
+  function findDiagramContainers() {
+    const containers = new Set();
+    document.querySelectorAll('pre.mermaid svg, div.mermaid svg').forEach(function (svg) {
+      const container = svg.closest('pre.mermaid, div.mermaid');
+      if (container) {
+        containers.add(container);
+      }
+    });
+    return containers;
+  }
+
   function attachAll() {
-    document.querySelectorAll('pre.mermaid, div.mermaid').forEach(wrapDiagram);
+    findDiagramContainers().forEach(wrapDiagram);
   }
 
   window.MermaidViewer = { attachAll, closeLightbox };
