@@ -28,61 +28,76 @@ Matrix-native **knowledge assistant** for healthcare users in **Element**: conve
 
 Voice uses a dedicated bot media path; the room timeline stays the audit trail and text fallback.
 
-## Architecture
+Source: [`video-assistant-architecture.mmd`](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-architecture.mmd) in cv repo.
 
 ```mermaid
 flowchart TB
-  subgraph client_layer [Client]
-    User["User"]
-    Element["Element client"]
-    User --> Element
+  subgraph Client["Element Client"]
+    User["User text voice call"]
+    Element["Element interface"]
+    User -->|text or audio| Element
   end
 
-  subgraph matrix_layer [Matrix homeserver]
-    Synapse["Synapse"]
-    Coturn["coturn TURN"]
-    LiveKit["LiveKit SFU"]
-    Element -->|signaling events| Synapse
+  subgraph Matrix["Matrix Homeserver"]
+    Synapse["Synapse server"]
+    Coturn["coturn TURN STUN"]
+    LiveKit["LiveKit SFU MatrixRTC"]
+    Element -->|signaling and events| Synapse
     Element -->|WebRTC media| Coturn
     Element -->|Element Call| LiveKit
   end
 
-  subgraph bot_layer [Knowledge bot]
-    Bot["matrix-bot Go"]
-    STT["STT Faster-Whisper"]
-    TTS["TTS Piper"]
-    Synapse -->|room events| Bot
-    LiveKit -->|audio stream| Bot
-    Bot --> STT
-    Bot --> TTS
+  Bot["Knowledge bot service"]
+
+  Synapse -->|bot events| Bot
+  LiveKit -->|audio stream| Bot
+
+  subgraph VoiceMVP["MVP voice pipeline"]
+    STT["STT Faster-Whisper or Vosk"]
+    TTS["TTS Piper or Coqui"]
+    Bot -->|audio stream| STT
+    STT -->|transcript text| Bot
+    Bot -->|answer text| TTS
+    TTS -->|audio reply| Bot
   end
 
-  subgraph rag_layer [GraphRAG]
-    Qdrant["Qdrant vectors"]
-    Neo4j["Neo4j graph"]
-    Ingestor["kg-ingestor"]
-    Bot --> Qdrant
-    Bot --> Neo4j
-    Ingestor --> Qdrant
-    Ingestor --> Neo4j
+  subgraph VoiceV2["v2 Wan Streamer when available"]
+    Wan["Wan Streamer duplex AV about 500ms"]
+    Bot -.->|future swap| Wan
+    Wan -.->|sync audio video| Bot
   end
 
-  subgraph ai_layer [Inference]
-    Ollama["Ollama Gemma Bonsai"]
-    Bot --> Ollama
+  subgraph GraphRAG["GraphRAG layer"]
+    Qdrant["Qdrant semantic vectors"]
+    Neo4j["Neo4j association graph"]
+    Ingestor["Ingestor Markdown to graph"]
+    Bot -->|semantic search| Qdrant
+    Bot -->|graph traversal| Neo4j
+    Qdrant -->|retrieved context| Bot
+    Neo4j -->|retrieved context| Bot
   end
 
-  subgraph persistence [Knowledge base]
-    Docs["Markdown corpus"]
-    Feedback["feedback store"]
-    Docs --> Ingestor
-    Bot --> Feedback
-    Feedback --> Qdrant
-    Feedback --> Neo4j
+  subgraph AI["AI inference"]
+    LLM["Ollama Gemma Bonsai humanize"]
+    Bot -->|prompt plus context| LLM
+    LLM -->|generated response| Bot
   end
 
-  Bot -->|text audio reply| Synapse
+  subgraph Persistence["Persistence"]
+    KB["Knowledge base Markdown files"]
+    FB["Feedback store"]
+    KB -->|ingest| Ingestor
+    Ingestor -->|chunks and entities| Qdrant
+    Ingestor -->|nodes and edges| Neo4j
+    Bot --> FB
+    FB -->|update| Qdrant
+    FB -->|update| Neo4j
+  end
+
+  Bot -->|text reply| Synapse
+  Bot -->|voice message| Synapse
   Synapse --> Element
+  Element -->|reaction feedback| Bot
 ```
 
 ## One voice turn
