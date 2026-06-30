@@ -102,7 +102,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 |------------|--------|------|
 | Pack und Cup GmbH (freelance) | 2016–2023 | [E-commerce client](/posts/pack-cup-ecommerce-freelance/) |
 | ProProdukt SL / produktor.io | 2006–present | [Own company](/posts/produktor-io-proprodukt/) · [Platform stack](/posts/produktor-platform-self-hosted-stack/) |
-| Edelweiss (healthcare) | 2025–present | [Knowledge base](/posts/edelweiss-healthcare-knowledge-base/) · [Video assistant MVP](/posts/edelweiss-video-assistant-mvp/) |
+| Edelweiss (healthcare) | 2025–present | [Knowledge base](/posts/edelweiss-healthcare-knowledge-base/) — [federation](/posts/edelweiss-healthcare-knowledge-base/#what-federated-matrix-chat-means) · [failover](/posts/edelweiss-healthcare-knowledge-base/#failover-when-a-homeserver-is-down) · [Video assistant MVP](/posts/edelweiss-video-assistant-mvp/) |
 | Markets Platform | 2024–2025 | [TradePlatform](/posts/markets-platform-tradeplatform/) |
 | Dyvenia | 2023–2025 | [Python data engineering](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/) |
 | Immowelt AG | 2019–2021 | [Geospatial search](/posts/immowelt-geospatial-search/) |
@@ -119,7 +119,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 
 | Topic | Post |
 |-------|------|
-| Matrix / WebRTC / VoIP · Edelweiss video assistant | [MVP architecture](/posts/edelweiss-video-assistant-mvp/) — [v1](/posts/edelweiss-video-assistant-mvp/#architecture-v1--modular-pipeline) · [v2](/posts/edelweiss-video-assistant-mvp/#architecture-mvp-v2--wan-streamer-lane) |
+| Matrix / WebRTC / VoIP · Edelweiss healthcare | [Federation & failover](/posts/edelweiss-healthcare-knowledge-base/#federation-topology-three-homeservers) · [video MVP](/posts/edelweiss-video-assistant-mvp/) |
 | Platform engineering | [produktor.io k3s / office / AI](/posts/produktor-platform-self-hosted-stack/) |
 | Architecture governance | [Inventar & ADR docs](/posts/inventar-docs-governance/) |
 | AI bot lineage | [eSliderbot → vidarr → RAG](/posts/esliderbot-telegram-llm-precursor/) |

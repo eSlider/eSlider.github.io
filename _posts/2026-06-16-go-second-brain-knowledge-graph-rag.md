@@ -40,6 +40,6 @@ Go · Neo4j (Cypher) · Qdrant · Ollama · Matrix · Docker Compose
 
 ## Related
 
-[Matrix / WebRTC / VoIP production stacks](/posts/edelweiss-video-assistant-mvp/) · [produktor.io](/posts/produktor-io-proprodukt/)
+[Matrix / WebRTC / VoIP production stacks](/posts/matrix-webrtc-voip-production/) · [produktor.io](/posts/produktor-io-proprodukt/)
 
 **Repository**: [github.com/eSlider/go-second-brain](https://github.com/eSlider/go-second-brain)

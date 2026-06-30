@@ -17,7 +17,7 @@ Matrix-native **knowledge assistant** for healthcare users in **Element**: conve
 
 - **Matrix / WebRTC stack** — Synapse, coturn, LiveKit (architecture below)
 - [go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) — GraphRAG bot SDK
-- [Edelweiss healthcare stack](/posts/edelweiss-healthcare-knowledge-base/) — pflege homeservers
+- [Edelweiss healthcare stack](/posts/edelweiss-healthcare-knowledge-base/) — pflege homeservers · [federation](/posts/edelweiss-healthcare-knowledge-base/#what-federated-matrix-chat-means)
 
 ## MVP flow
 
