@@ -5,6 +5,7 @@
   border-radius: 8px;
   background: var(--card-bg);
   overflow: hidden;
+  width: 100%;
 }
 
 .mermaid-toolbar {
@@ -33,12 +34,21 @@
 
 .mermaid-stage {
   overflow: auto;
-  max-height: min(70vh, 720px);
+  width: 100%;
+  min-height: min(55vh, 640px);
+  max-height: min(80vh, 900px);
   cursor: grab;
   padding: 1rem;
-  text-align: center;
   touch-action: none;
   background: transparent;
+}
+
+.mermaid-figure--lightbox .mermaid-stage,
+.mermaid-lightbox-body .mermaid-stage {
+  min-height: 0;
+  max-height: none;
+  flex: 1 1 auto;
+  height: 100%;
 }
 
 .mermaid-stage.is-dragging {
@@ -46,22 +56,37 @@
 }
 
 .mermaid-inner {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  max-width: none;
+  margin: 0 auto;
   transform-origin: center center;
-  will-change: transform;
 }
 
 .mermaid-inner pre.mermaid,
 .mermaid-inner div.mermaid {
+  display: block !important;
+  width: max-content !important;
+  max-width: none !important;
   margin: 0 !important;
   background: transparent !important;
   border: none !important;
   padding: 0 !important;
+  overflow: visible !important;
 }
 
 .mermaid-inner svg {
-  max-width: none;
-  height: auto;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.post-content .mermaid-figure .mermaid-inner svg,
+.post-content .mermaid-figure pre.mermaid svg {
+  width: auto !important;
+  max-width: none !important;
 }
 
 .mermaid-btn {
@@ -93,9 +118,9 @@
   inset: 0;
   z-index: 9999;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
 }
 
 .mermaid-lightbox[hidden] {
@@ -105,26 +130,30 @@
 .mermaid-lightbox-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .mermaid-lightbox-dialog {
   position: relative;
   z-index: 1;
-  width: min(96vw, 1400px);
-  max-height: 92vh;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: none;
+  border-radius: 0;
   background: var(--card-bg);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
 }
 
 .mermaid-lightbox-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex: 0 0 auto;
   padding: 0.5rem 0.75rem;
   border-bottom: 1px solid var(--border-color);
 }
@@ -141,17 +170,21 @@
 }
 
 .mermaid-lightbox-body {
-  padding: 0.75rem;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0.5rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .mermaid-lightbox-body .mermaid-figure {
   margin: 0;
   border: none;
-}
-
-.mermaid-lightbox-body .mermaid-stage {
-  max-height: calc(92vh - 5rem);
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 body.mermaid-lightbox-open {

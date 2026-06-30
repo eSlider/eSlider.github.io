@@ -27,12 +27,65 @@
     return { scale: 1, x: 0, y: 0 };
   }
 
+  function normalizeSvg(container) {
+    const svg = container.querySelector('svg');
+    if (!svg || svg.dataset.normalized === 'true') {
+      return svg;
+    }
+
+    svg.removeAttribute('width');
+    svg.removeAttribute('height');
+    svg.style.removeProperty('max-width');
+
+    const viewBox = svg.getAttribute('viewBox');
+    if (viewBox) {
+      const parts = viewBox.trim().split(/[\s,]+/).map(Number);
+      if (parts.length === 4 && parts[2] > 0 && parts[3] > 0) {
+        svg.style.width = parts[2] + 'px';
+        svg.style.height = parts[3] + 'px';
+      }
+    }
+
+    svg.style.maxWidth = 'none';
+    svg.style.height = 'auto';
+    svg.dataset.normalized = 'true';
+    return svg;
+  }
+
   function applyTransform(stage, state) {
     const inner = stage.querySelector('.mermaid-inner');
     if (!inner) {
       return;
     }
-    inner.style.transform = 'translate(' + state.x + 'px, ' + state.y + 'px) scale(' + state.scale + ')';
+    inner.style.transform =
+      'translate(' + state.x + 'px, ' + state.y + 'px) scale(' + state.scale + ')';
+  }
+
+  function fitToStage(stage, state) {
+    const inner = stage.querySelector('.mermaid-inner');
+    const svg = inner && inner.querySelector('svg');
+    if (!inner || !svg) {
+      return;
+    }
+
+    normalizeSvg(inner);
+
+    const stageW = stage.clientWidth - 24;
+    const stageH = stage.clientHeight - 24;
+    const svgW = svg.getBoundingClientRect().width;
+    const svgH = svg.getBoundingClientRect().height;
+
+    if (!stageW || !stageH || !svgW || !svgH) {
+      return;
+    }
+
+    const scale = Math.min(stageW / svgW, stageH / svgH, 1);
+    if (scale < 1) {
+      state.scale = scale;
+      state.x = 0;
+      state.y = 0;
+      applyTransform(stage, state);
+    }
   }
 
   function bindPan(stage, state) {
@@ -89,7 +142,7 @@
     stage.addEventListener('pointercancel', endDrag);
   }
 
-  function bindToolbar(toolbar, state, stage, onExpand) {
+  function bindToolbar(toolbar, state, stage, onExpand, fitOnReset) {
     toolbar.addEventListener('click', function (event) {
       const button = event.target.closest('[data-action]');
       if (!button) {
@@ -107,6 +160,13 @@
         state.scale = 1;
         state.x = 0;
         state.y = 0;
+        applyTransform(stage, state);
+        if (fitOnReset) {
+          requestAnimationFrame(function () {
+            fitToStage(stage, state);
+          });
+        }
+        return;
       } else if (action === 'expand') {
         onExpand();
         return;
@@ -168,21 +228,46 @@
     const clone = figure.cloneNode(true);
     clone.classList.add('mermaid-figure--lightbox');
     clone.querySelector('.mermaid-hint')?.remove();
+
+    const inner = clone.querySelector('.mermaid-inner');
+    if (inner) {
+      inner.style.transform = '';
+      const svg = inner.querySelector('svg');
+      if (svg) {
+        svg.dataset.normalized = 'false';
+      }
+    }
+
     return clone;
   }
 
-  function wireFigure(figure, openOnClick) {
+  function wireFigure(figure, options) {
     const stage = figure.querySelector('.mermaid-stage');
     const toolbar = figure.querySelector('.mermaid-toolbar');
+    const inner = figure.querySelector('.mermaid-inner');
     const state = createState();
 
+    normalizeSvg(inner || figure);
     applyTransform(stage, state);
-    bindPan(stage, state);
-    bindToolbar(toolbar, state, stage, function () {
-      openLightbox(figure);
-    });
 
-    if (openOnClick) {
+    if (options.fit) {
+      requestAnimationFrame(function () {
+        fitToStage(stage, state);
+      });
+    }
+
+    bindPan(stage, state);
+    bindToolbar(
+      toolbar,
+      state,
+      stage,
+      function () {
+        openLightbox(figure);
+      },
+      options.fit
+    );
+
+    if (options.openOnClick) {
       stage.addEventListener('click', function (event) {
         if (event.target.closest('.mermaid-toolbar')) {
           return;
@@ -203,10 +288,11 @@
 
     const clone = cloneFigure(figure);
     body.appendChild(clone);
-    wireFigure(clone, false);
 
     box.hidden = false;
     document.body.classList.add('mermaid-lightbox-open');
+
+    wireFigure(clone, { fit: true, openOnClick: false });
   }
 
   function wrapDiagram(container) {
@@ -218,6 +304,7 @@
     }
 
     container.dataset.viewerReady = 'true';
+    normalizeSvg(container);
 
     const figure = document.createElement('figure');
     figure.className = 'mermaid-figure';
@@ -239,7 +326,7 @@
     stage.appendChild(inner);
     inner.appendChild(container);
 
-    wireFigure(figure, true);
+    wireFigure(figure, { fit: true, openOnClick: true });
   }
 
   function attachAll() {
