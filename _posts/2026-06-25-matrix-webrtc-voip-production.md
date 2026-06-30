@@ -4,10 +4,12 @@ date: 2026-06-25 10:00:00 +0000
 categories: [DevOps, Software Architectures]
 tags: [Matrix, WebRTC, LiveKit, Jitsi, coturn, Docker, Element, VoIP]
 description: "~2 years operating federated Matrix homeservers with coturn, LiveKit SFU, and on-prem Jitsi Meet across three organizations."
-pin: true
+pin: false
 ---
 
 Production **video and audio** over **WebRTC**: self-hosted **Matrix** homeservers with **Element** clients, **coturn** TURN/STUN, **LiveKit** SFU (MatrixRTC / Element Call), and **Jitsi Meet** for on-premise conferences.
+
+**Current focus**: [Edelweiss video assistant MVP](/posts/edelweiss-video-assistant-mvp/) — Matrix + GraphRAG voice bot (builds on this stack).
 
 **Period**: 2024–present (~2 years active ops)  
 **Primary stack**: `produktor/orange/chat` on long-term archive host (Synapse, Element, coturn, LiveKit, Jitsi)

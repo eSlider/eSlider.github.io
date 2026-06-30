@@ -4,6 +4,7 @@ date: 2026-06-25 12:00:00 +0000
 categories: [Projects, Software Architectures]
 tags: [Healthcare, Matrix, WebRTC, Neo4j, Qdrant, RAG, Ollama, STT, TTS]
 description: "MVP: Element assistant bot — voice/text → STT → GraphRAG → Ollama humanize → TTS, with feedback into Qdrant and Neo4j."
+pin: true
 mermaid: true
 ---
 
