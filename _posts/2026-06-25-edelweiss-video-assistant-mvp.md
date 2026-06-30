@@ -106,72 +106,86 @@ flowchart TD
 
 ```mermaid
 flowchart TB
-  subgraph Client["Element Client"]
-    User["User text voice call"]
-    Element["Element interface"]
-    User -->|text or audio| Element
-  end
+    %% Styling
+    classDef client fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef matrix fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef bot fill:#e8f5e9,stroke:#388e3c,stroke-width:3px
+    classDef voice fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef rag fill:#e0f2f1,stroke:#00796b,stroke-width:2px
+    classDef ai fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    classDef persist fill:#f1f8e9,stroke:#689f38,stroke-width:2px
 
-  subgraph Matrix["Matrix Homeserver"]
-    Synapse["Synapse server"]
-    Coturn["coturn TURN STUN"]
-    LiveKit["LiveKit SFU MatrixRTC"]
-    Element -->|signaling and events| Synapse
-    Element -->|WebRTC media| Coturn
-    Element -->|Element Call| LiveKit
-  end
+    subgraph Client["🌐 Element Client (Web / X)"]
+        User["👤 User<br>Text / Voice / Call"]
+        Element["Element Interface"]
+        User -->|📤 Text or Audio| Element
+    end
 
-  Bot["Knowledge bot service"]
+    subgraph Matrix["🏠 Matrix Homeserver"]
+        Synapse["Synapse Server"]
+        Coturn["coturn<br>TURN / STUN"]
+        LiveKit["LiveKit SFU<br>MatrixRTC / Element Call"]
+        
+        Element <-->|Signaling & Events| Synapse
+        Element -->|WebRTC Media 1-1| Coturn
+        Element <-->|Group Calls SFU| LiveKit
+    end
 
-  Synapse -->|bot events| Bot
-  LiveKit -->|audio stream| Bot
+    Bot["🤖 Knowledge Bot Service<br>(Matrix Bot)"]:::bot
 
-  subgraph VoiceMVP["MVP voice pipeline"]
-    STT["STT Faster-Whisper or Vosk"]
-    TTS["TTS Piper or Coqui"]
-    Bot -->|audio stream| STT
-    STT -->|transcript text| Bot
-    Bot -->|answer text| TTS
-    TTS -->|audio reply| Bot
-  end
+    %% Matrix <-> Bot
+    Synapse <-->|Bot Events / Messages| Bot
+    LiveKit <-->|Audio / Call Streams| Bot
 
-  subgraph VoiceV2["v2 Wan Streamer when available"]
-    Wan["Wan Streamer duplex AV about 500ms"]
-    Bot -.->|future swap| Wan
-    Wan -.->|sync audio video| Bot
-  end
+    subgraph VoiceMVP["🎙️ MVP Voice Pipeline"]
+        STT["STT<br>Faster-Whisper / Vosk"]
+        TTS["TTS<br>Piper / Coqui"]
+        Bot -->|Send Audio| STT
+        STT -->|Transcript Text| Bot
+        Bot -->|Answer Text| TTS
+        TTS -->|Audio Reply| Bot
+    end
 
-  subgraph GraphRAG["GraphRAG layer"]
-    Qdrant["Qdrant semantic vectors"]
-    Neo4j["Neo4j association graph"]
-    Ingestor["Ingestor Markdown to graph"]
-    Bot -->|semantic search| Qdrant
-    Bot -->|graph traversal| Neo4j
-    Qdrant -->|retrieved context| Bot
-    Neo4j -->|retrieved context| Bot
-  end
+    subgraph GraphRAG["🔍 GraphRAG Layer"]
+        Qdrant["Qdrant<br>Semantic Vectors"]
+        Neo4j["Neo4j<br>Association Graph"]
+        Ingestor["Ingestor<br>Markdown → Graph + Embeddings"]
+        
+        Bot -->|Semantic Search| Qdrant
+        Bot -->|Graph Traversal| Neo4j
+        Qdrant & Neo4j -->|Retrieved Context| Bot
+    end
 
-  subgraph AI["AI inference"]
-    LLM["Ollama Gemma Bonsai humanize"]
-    Bot -->|prompt plus context| LLM
-    LLM -->|generated response| Bot
-  end
+    subgraph AI["🧠 AI Inference"]
+        LLM["Local LLM<br>Ollama + Gemma / Bonsai<br>Humanize & Generate"]
+        Bot -->|Prompt + History + Context| LLM
+        LLM -->|Humanized Response| Bot
+    end
 
-  subgraph Persistence["Persistence"]
-    KB["Knowledge base Markdown files"]
-    FB["Feedback store"]
-    KB -->|ingest| Ingestor
-    Ingestor -->|chunks and entities| Qdrant
-    Ingestor -->|nodes and edges| Neo4j
-    Bot --> FB
-    FB -->|update| Qdrant
-    FB -->|update| Neo4j
-  end
+    subgraph Persistence["💾 Persistence"]
+        KB["Knowledge Base<br>Markdown Files"]
+        FB["Feedback Store"]
+        
+        KB -->|Ingest| Ingestor
+        Ingestor -->|Chunks & Entities| Qdrant
+        Ingestor -->|Nodes & Edges| Neo4j
+        Bot -->|User Feedback| FB
+        FB -->|Update / Store| Qdrant
+        FB -->|Update / Store| Neo4j
+    end
 
-  Bot -->|text reply| Synapse
-  Bot -->|voice message| Synapse
-  Synapse --> Element
-  Element -->|reaction feedback| Bot
+    %% Final Outputs
+    Bot -->|Text Reply| Synapse
+    Bot -->|Voice Message| Synapse
+    Synapse -->|Deliver to User| Element
+    Element -->|Reaction / Feedback| Bot
+
+    class Client client
+    class Matrix matrix
+    class VoiceMVP voice
+    class GraphRAG rag
+    class AI ai
+    class Persistence persist
 ```
 
 ## One voice turn
