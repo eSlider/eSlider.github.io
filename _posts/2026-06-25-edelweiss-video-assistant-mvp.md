@@ -29,7 +29,83 @@ Matrix-native **knowledge assistant** for healthcare users in **Element**: conve
 
 Voice uses a dedicated bot media path; the room timeline stays the audit trail and text fallback.
 
-**Portfolio detail**: [eSlider/cv — video-assistant-mvp](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-mvp.md) · [architecture source](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-architecture.mmd) · [SVG diagram](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-architecture.svg)
+**Portfolio detail**: [eSlider/cv — video-assistant-mvp](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-mvp.md) · [v1 architecture](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-architecture-v1.mmd) · [MVP v2 source](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-architecture.mmd) · [SVG diagram](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-architecture.svg)
+
+## Architecture v1 — modular pipeline
+
+Original modular design: bot inside Matrix homeserver, STT → GraphRAG → Ollama → TTS, feedback via ingestor.
+
+```mermaid
+flowchart TD
+  subgraph Client["Element Client Web X"]
+    User["User text voice call"]
+    Element["Element interface"]
+  end
+
+  subgraph Matrix["Matrix Homeserver"]
+    Synapse["Synapse server"]
+    Coturn["coturn TURN STUN"]
+    LiveKit["LiveKit SFU MatrixRTC"]
+    Bot["Knowledge bot service"]
+  end
+
+  subgraph Voice["Voice pipeline"]
+    STT["STT Faster-Whisper or Vosk"]
+    TTS["TTS Piper or Coqui"]
+  end
+
+  subgraph RAG["GraphRAG layer"]
+    Qdrant["Qdrant semantic vectors"]
+    Neo4j["Neo4j association graph"]
+    Ingest["Ingestor Markdown to graph"]
+  end
+
+  subgraph AI["AI inference"]
+    LLM["Ollama Gemma Bonsai humanize"]
+  end
+
+  subgraph Storage["Persistence"]
+    KB["Knowledge base Markdown files"]
+    Feedback["Feedback store"]
+  end
+
+  User -->|text or audio| Element
+  Element -->|signaling events| Synapse
+  Synapse -->|signaling events| Element
+  Element -->|media streams| LiveKit
+  LiveKit -->|media streams| Element
+  Element -->|WebRTC media| Coturn
+  Synapse -->|bot events| Bot
+  Bot -->|bot events| Synapse
+  LiveKit -->|bot joins calls| Bot
+  Bot -->|bot joins calls| LiveKit
+
+  Bot -->|audio stream| STT
+  STT -->|transcript text| Bot
+  Bot -->|semantic search| Qdrant
+  Bot -->|graph traversal| Neo4j
+  Qdrant -->|retrieved context| Bot
+  Neo4j -->|retrieved context| Bot
+  Bot -->|prompt plus context| LLM
+  LLM -->|generated response| Bot
+  Bot -->|text reply| Element
+  Bot -->|audio reply| TTS
+  TTS -->|voice message| Element
+
+  KB -->|ingest| Ingest
+  Ingest -->|chunks and entities| Qdrant
+  Ingest -->|nodes and edges| Neo4j
+
+  User -->|reaction feedback| Bot
+  Bot -->|store refined data| Feedback
+  Feedback -->|update| Ingest
+
+  style Bot fill:#e1f5fe
+  style LLM fill:#f3e5f5
+  style LiveKit fill:#e8f5e8
+```
+
+## Architecture MVP v2 — Wan Streamer lane
 
 ```mermaid
 flowchart TB
