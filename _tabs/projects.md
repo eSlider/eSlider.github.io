@@ -39,7 +39,8 @@ Full profile: [github.com/eSlider](https://github.com/eSlider)
 | [inventar / docs](https://github.com/eSlider/inventar) | — | 2026-04 | [ADR governance](/posts/inventar-docs-governance/) |
 | [mail-archive](https://github.com/eSlider/mail-archive) | Go | 2026-02-15 | [Mail archive](/posts/mail-archive-imap-search/) |
 | [geo-spider-app](https://github.com/eSlider/geo-spider-app) | KMP | 2026-01-04 | [Android GPS tracker](/posts/geo-spider-app-android-gps/) |
-| Trading / Binance sync | Go, React | 2026 | [Trading algorithms](/posts/trading-algorithms-binance-sync/) |
+| webdav-sharing (private repo) | Docker | 2026-03 | [SFTPGo + MinIO WebDAV](/posts/webdav-sharing-sftpgo-minio/) |
+| [go-matrix-bot](https://github.com/eSlider/go-matrix-bot) | Go | 2026-02 | [Matrix bot integrations](/posts/go-matrix-bot-matrix-integrations/) |
 
 ---
 
@@ -71,9 +72,9 @@ Research prototypes and PoCs — not all have long-form posts yet.
 | Project | Lang | Updated | Notes |
 |---------|------|---------|-------|
 | [yamd](https://github.com/eSlider/yamd) | JS | 2026-06-17 | [Post](/posts/yamd-markdown-yaml-engine/) · [live demo](https://eSlider.github.io/yamd/) · ★1 |
-| [go-quicktype](https://github.com/eSlider/go-quicktype) | TS | 2026-06-19 | quicktype fork — typed models from JSON/Schema/TS/GraphQL in browser |
+| [go-quicktype](https://github.com/eSlider/go-quicktype) | TS | 2026-06-19 | [Browser app post](/posts/go-quicktype-browser-app/) · [live demo](https://eslider.github.io/go-quicktype/) |
 | [aws-gcp-azure](https://github.com/eSlider/aws-gcp-azure) | Python | 2026-06-25 | [Multi-cloud serverless LAMBDA](/posts/multi-cloud-serverless-lambda/) — AWS/GCP/Azure |
-| [carbonyl](https://github.com/eSlider/carbonyl) | Rust | 2026-06-08 | Chromium terminal browser fork — SSH-friendly, tracks M148 stable |
+| [carbonyl](https://github.com/eSlider/carbonyl) | Rust | 2026-06-08 | [Terminal Chromium post](/posts/carbonyl-terminal-chromium-browser/) · GHCR images |
 | [go-microgpt](https://github.com/eSlider/go-microgpt) | Go | 2026-03-14 | MicroGPT rewritten and optimized in Go |
 | [atom-one-light-eslider](https://github.com/eSlider/atom-one-light-eslider) | — | 2026-05-19 | VS Code / Cursor theme with eSlider accents |
 | [crypto-exchange-manager-v2](https://github.com/eSlider/crypto-exchange-manager-v2) | TS | 2026-01-04 | Exchange manager PoC |
@@ -118,7 +119,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 
 | Topic | Post |
 |-------|------|
-| Matrix / WebRTC / VoIP · Edelweiss video assistant | [MVP architecture](/posts/edelweiss-video-assistant-mvp/) |
+| Matrix / WebRTC / VoIP · Edelweiss video assistant | [MVP architecture](/posts/edelweiss-video-assistant-mvp/) — [v1](/posts/edelweiss-video-assistant-mvp/#architecture-v1--modular-pipeline) · [v2](/posts/edelweiss-video-assistant-mvp/#architecture-mvp-v2--wan-streamer-lane) |
 | Platform engineering | [produktor.io k3s / office / AI](/posts/produktor-platform-self-hosted-stack/) |
 | Architecture governance | [Inventar & ADR docs](/posts/inventar-docs-governance/) |
 | AI bot lineage | [eSliderbot → vidarr → RAG](/posts/esliderbot-telegram-llm-precursor/) |

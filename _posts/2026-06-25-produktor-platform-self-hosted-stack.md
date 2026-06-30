@@ -46,4 +46,3 @@ Go · Docker · k3s/Kubernetes · OnlyOffice · Gitea · Ollama · Open WebUI ·
 
 [go-onlyoffice](/posts/go-onlyoffice-oo-cli/) · [AI Fabric](/posts/ai-fabric-agent-delivery/) · [go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) · [Compose patterns](/posts/docker-compose-stack-patterns/)
 
-**Portfolio detail**: [github.com/eSlider/cv — produktor-platform](https://github.com/eSlider/cv/blob/main/projects/produktor-platform/overview.md)

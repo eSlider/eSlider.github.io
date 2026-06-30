@@ -34,4 +34,3 @@ Pairs with [self-hosted AI delivery](/posts/self-hosted-ai-delivery-fabric/) and
 
 [produktor.io](/posts/produktor-io-proprodukt/) · [AI Fabric](/posts/ai-fabric-agent-delivery/)
 
-**Portfolio detail**: [github.com/eSlider/cv — inventar-docs](https://github.com/eSlider/cv/blob/main/projects/inventar-docs/overview.md)

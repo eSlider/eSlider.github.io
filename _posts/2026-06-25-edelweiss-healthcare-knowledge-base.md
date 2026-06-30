@@ -46,4 +46,3 @@ See [Matrix / WebRTC / VoIP production stacks](/posts/edelweiss-video-assistant-
 
 [go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) · [Video assistant MVP](/posts/edelweiss-video-assistant-mvp/) · [produktor.io](/posts/produktor-io-proprodukt/)
 
-**Portfolio detail**: [github.com/eSlider/cv — edelweiss](https://github.com/eSlider/cv/blob/main/projects/edelweiss/overview.md)

@@ -37,4 +37,3 @@ PHP · MySQL/MariaDB · Hetzner · Docker Compose · Linux
 
 [ProProdukt SL](/posts/produktor-io-proprodukt/) · [VisCreation era](/posts/viscreation-magento-cms-era/) · [GRID GmbH](/posts/grid-gmbh-cms-clients/)
 
-**Portfolio detail**: [github.com/eSlider/cv — pack-cup](https://github.com/eSlider/cv/blob/main/projects/pack-cup/overview.md)

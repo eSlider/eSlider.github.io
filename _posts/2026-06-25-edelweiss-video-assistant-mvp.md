@@ -30,7 +30,7 @@ Matrix-native **knowledge assistant** for healthcare users in **Element**: conve
 
 Voice uses a dedicated bot media path; the room timeline stays the audit trail and text fallback.
 
-**Portfolio detail**: [eSlider/cv — video-assistant-mvp](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-mvp.md) · [v1 architecture](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-architecture-v1.mmd) · [MVP v2 source](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-architecture.mmd) · [SVG diagram](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-architecture.svg)
+**On this page**: [v1 architecture](#architecture-v1--modular-pipeline) · [MVP v2](#architecture-mvp-v2--wan-streamer-lane) · [one voice turn](#one-voice-turn) · [Wan Streamer roadmap](#next-version--wan-streamer)
 
 ## Architecture v1 — modular pipeline
 

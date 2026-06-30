@@ -32,4 +32,3 @@ Early **AI Telegram bot** with OpenAI API integration, **audio recognition** (Wh
 
 [AI Fabric](/posts/ai-fabric-agent-delivery/) · [go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) · [produktor platform](/posts/produktor-platform-self-hosted-stack/)
 
-**Portfolio detail**: [github.com/eSlider/cv — esliderbot](https://github.com/eSlider/cv/blob/main/projects/esliderbot/overview.md)

@@ -39,5 +39,5 @@ Not a benchmark shoot-out — a map of ecosystem trade-offs (Viper env binding, 
 
 - **Full essay**: [medium.com/@andreyoblivantsev/…](https://medium.com/@andreyoblivantsev/go-config-many-good-pieces-no-whole-picture-039ec77193be)
 - **README**: [github.com/eSlider/go-config](https://github.com/eSlider/go-config/blob/main/README.md)
-- **Portfolio detail**: [github.com/eSlider/cv — go-config](https://github.com/eSlider/cv/blob/main/projects/go-config/overview.md)
+- **Repository**: [github.com/eSlider/go-config](https://github.com/eSlider/go-config)
 - **Library cluster**: [Go libraries toolkit](/posts/go-libraries-toolkit/)

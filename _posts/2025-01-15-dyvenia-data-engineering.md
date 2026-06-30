@@ -52,5 +52,5 @@ Consultancy focus: [Data Service](https://dyvenia.com/solutions/data-service/) �
 ## Links
 
 - Employer: [dyvenia.com](https://dyvenia.com/) · [viadot](https://github.com/dyvenia/viadot)
-- Portfolio: [github.com/eSlider/cv — dyvenia](https://github.com/eSlider/cv/blob/main/projects/dyvenia/overview.md) · [repositories](https://github.com/eSlider/cv/blob/main/projects/dyvenia/repositories.md)
+- Related posts: [Dyvenia data engineering](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/)
 - Prior: [Immowelt (Go)](/posts/immowelt-geospatial-search/) · Next: [Markets Platform (Go)](/posts/markets-platform-tradeplatform/)

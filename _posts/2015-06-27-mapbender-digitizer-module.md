@@ -63,6 +63,6 @@ Built alongside **[vis-ui.js](/posts/vis-ui-js-mapbender/)** (UI generator) and 
 
 PHP · Symfony · JavaScript · PostgreSQL/PostGIS · YAML · OpenLayers
 
-## Portfolio detail
+## See also
 
-Full product write-up in CV repo: [projects/mapbender-digitizer/overview.md](https://github.com/eSlider/cv/blob/main/projects/mapbender-digitizer/overview.md)
+[WhereGroup / Mapbender GIS](/posts/wheregroup-mapbender-gis/) · [vis-ui.js](/posts/vis-ui-js-mapbender/)

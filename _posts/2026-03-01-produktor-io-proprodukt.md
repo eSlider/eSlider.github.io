@@ -42,7 +42,6 @@ Go · PHP · Magento · k3s · OnlyOffice · MinIO · Gitea · Ollama · Grafana
 
 Federated **Matrix** homeservers with **Element**, **coturn**, **LiveKit** (MatrixRTC), and **Jitsi Meet** for on-prem conferences. Operated across produktor.io, partner, and healthcare client homeservers. See [Matrix / WebRTC / VoIP](/posts/edelweiss-video-assistant-mvp/) and [Edelweiss](/posts/edelweiss-healthcare-knowledge-base/).
 
-**Portfolio detail**: [github.com/eSlider/cv — produktor-company](https://github.com/eSlider/cv/blob/main/projects/produktor-company/overview.md)
 
 ## Note
 

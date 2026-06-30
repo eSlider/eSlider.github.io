@@ -21,4 +21,3 @@ Java · Tcl/Tk · MySQL · Oracle · PostgreSQL · SQL tuning · versioned APIs
 
 Bridge from [GRID / VisCreation PHP era](/posts/grid-gmbh-cms-clients/) to [WhereGroup Mapbender](/posts/wheregroup-mapbender-gis/) (2014–2018) and later **Go/Python** data platforms at Immowelt and Dyvenia.
 
-**Portfolio detail**: [github.com/eSlider/cv — sigos](https://github.com/eSlider/cv/blob/main/projects/sigos/overview.md)

@@ -36,7 +36,6 @@ Today the agency builds **D2S/PLATFORM** e-commerce, PIM, multishop, and intrane
 
 Led into **VisCreation** (founded 2006, VisBack / VisCMS) and later **[GRID / GRIDFACTOR](https://gridfactor.de/)** subcontractor work (2006–2012), then SIGOS, WhereGroup, Immowelt, Dyvenia.
 
-**Portfolio detail**: [github.com/eSlider/cv — d2s](https://github.com/eSlider/cv/blob/main/projects/d2s/overview.md) · [d2s referenzen index](https://github.com/eSlider/cv/blob/main/projects/d2s/d2s-referenzen.md)
 
 ## Tech stack
 
