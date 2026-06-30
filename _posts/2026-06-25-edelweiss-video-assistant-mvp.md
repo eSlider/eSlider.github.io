@@ -158,7 +158,7 @@ flowchart TB
 
     subgraph AI["🧠 AI Inference"]
         LLM["Local LLM<br>Ollama + Gemma / Bonsai<br>Humanize & Generate"]
-        Bot -->|Prompt + History + Context| LLM
+        Bot --->|Prompt + History + Context| LLM
         LLM -->|Humanized Response| Bot
     end
 
@@ -169,7 +169,7 @@ flowchart TB
         KB -->|Ingest| Ingestor
         Ingestor -->|Chunks & Entities| Qdrant
         Ingestor -->|Nodes & Edges| Neo4j
-        Bot -->|User Feedback| FB
+        Bot --->|User Feedback| FB
         FB -->|Update / Store| Qdrant
         FB -->|Update / Store| Neo4j
     end
