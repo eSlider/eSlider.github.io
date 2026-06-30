@@ -28,7 +28,7 @@ Matrix-native **knowledge assistant** for healthcare users in **Element**: conve
 
 Voice uses a dedicated bot media path; the room timeline stays the audit trail and text fallback.
 
-Source: [`video-assistant-architecture.mmd`](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-architecture.mmd) in cv repo.
+**Portfolio detail**: [eSlider/cv — video-assistant-mvp](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-mvp.md) · [architecture source](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-architecture.mmd) · [SVG diagram](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-architecture.svg)
 
 ```mermaid
 flowchart TB
@@ -149,8 +149,6 @@ sequenceDiagram
 MVP uses a **modular** voice path (STT → GraphRAG → Ollama → TTS). The **next version** adapts **[Wan Streamer](https://wan-streamer.com/)** as soon as it is available for integration: one end-to-end streaming Transformer for real-time, full-duplex audio-visual interaction (~**200 ms** model-side, ~**500–550 ms** total per their v0.1 figures — much faster than chained ASR/LLM/TTS).
 
 GraphRAG (Qdrant + Neo4j) remains the **knowledge layer**; Wan Streamer becomes the **interaction layer** (voice reply, optional synchronized video agent).
-
-**Portfolio detail**: [github.com/eSlider/cv — video-assistant-mvp](https://github.com/eSlider/cv/blob/main/projects/edelweiss/video-assistant-mvp.md)
 
 ## Related
 
