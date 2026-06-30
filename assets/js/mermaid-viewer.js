@@ -1,5 +1,6 @@
 /**
  * GitHub-style Mermaid controls: hover toolbar, drag to pan, click to expand.
+ * Zoom resizes the SVG (vector) — never CSS scale(), which rasterizes and blurs.
  */
 (function () {
   'use strict';
@@ -9,83 +10,115 @@
   const ZOOM_MAX = 5;
   const CLICK_TOLERANCE = 6;
 
-  function createToolbar() {
+  function createToolbar(includeFullscreen) {
     const toolbar = document.createElement('div');
     toolbar.className = 'mermaid-toolbar';
     toolbar.setAttribute('role', 'toolbar');
     toolbar.setAttribute('aria-label', 'Diagram controls');
-    toolbar.innerHTML = [
+    const buttons = [
       '<button type="button" class="mermaid-btn" data-action="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>',
       '<button type="button" class="mermaid-btn" data-action="zoom-out" title="Zoom out" aria-label="Zoom out">−</button>',
       '<button type="button" class="mermaid-btn" data-action="reset" title="Reset view" aria-label="Reset view">⟲</button>',
-      '<button type="button" class="mermaid-btn" data-action="expand" title="Expand" aria-label="Expand diagram">⤢</button>',
-    ].join('');
+    ];
+    if (includeFullscreen) {
+      buttons.push(
+        '<button type="button" class="mermaid-btn" data-action="fullscreen" title="Fullscreen" aria-label="Fullscreen">⛶</button>'
+      );
+    }
+    buttons.push(
+      '<button type="button" class="mermaid-btn" data-action="expand" title="Expand" aria-label="Expand diagram">⤢</button>'
+    );
+    toolbar.innerHTML = buttons.join('');
     return toolbar;
   }
 
   function createState() {
-    return { scale: 1, x: 0, y: 0 };
+    return { scale: 1, x: 0, y: 0, baseW: 0, baseH: 0 };
+  }
+
+  function parseViewBox(svg) {
+    const viewBox = svg.getAttribute('viewBox');
+    if (!viewBox) {
+      return null;
+    }
+    const parts = viewBox.trim().split(/[\s,]+/).map(Number);
+    if (parts.length !== 4 || parts[2] <= 0 || parts[3] <= 0) {
+      return null;
+    }
+    return { width: parts[2], height: parts[3] };
   }
 
   function normalizeSvg(container) {
     const svg = container.querySelector('svg');
-    if (!svg || svg.dataset.normalized === 'true') {
-      return svg;
+    if (!svg) {
+      return null;
     }
 
     svg.removeAttribute('width');
     svg.removeAttribute('height');
     svg.style.removeProperty('max-width');
-
-    const viewBox = svg.getAttribute('viewBox');
-    if (viewBox) {
-      const parts = viewBox.trim().split(/[\s,]+/).map(Number);
-      if (parts.length === 4 && parts[2] > 0 && parts[3] > 0) {
-        svg.style.width = parts[2] + 'px';
-        svg.style.height = parts[3] + 'px';
-      }
-    }
-
     svg.style.maxWidth = 'none';
-    svg.style.height = 'auto';
-    svg.dataset.normalized = 'true';
+    svg.style.maxHeight = 'none';
+    svg.style.display = 'block';
     return svg;
   }
 
-  function applyTransform(stage, state) {
-    const inner = stage.querySelector('.mermaid-inner');
-    if (!inner) {
-      return;
+  function initSvgMetrics(inner, state) {
+    const svg = normalizeSvg(inner);
+    if (!svg) {
+      return null;
     }
-    inner.style.transform =
-      'translate(' + state.x + 'px, ' + state.y + 'px) scale(' + state.scale + ')';
+
+    if (state.baseW > 0 && state.baseH > 0) {
+      return svg;
+    }
+
+    const box = parseViewBox(svg);
+    if (box) {
+      state.baseW = box.width;
+      state.baseH = box.height;
+      return svg;
+    }
+
+    const rect = svg.getBoundingClientRect();
+    state.baseW = rect.width || 800;
+    state.baseH = rect.height || 600;
+    return svg;
   }
 
-  function fitToStage(stage, state) {
+  /** Pan only — zoom is applied by resizing the SVG so text stays vector-crisp. */
+  function applyView(stage, state) {
     const inner = stage.querySelector('.mermaid-inner');
     const svg = inner && inner.querySelector('svg');
-    if (!inner || !svg) {
+    if (!inner || !svg || !state.baseW || !state.baseH) {
       return;
     }
 
-    normalizeSvg(inner);
+    const width = Math.max(1, Math.round(state.baseW * state.scale));
+    const height = Math.max(1, Math.round(state.baseH * state.scale));
+    svg.style.width = width + 'px';
+    svg.style.height = height + 'px';
+    inner.style.transform = 'translate(' + state.x + 'px, ' + state.y + 'px)';
+  }
+
+  function fitToStage(stage, state, allowUpscale) {
+    const inner = stage.querySelector('.mermaid-inner');
+    if (!inner || !initSvgMetrics(inner, state)) {
+      return;
+    }
 
     const stageW = stage.clientWidth - 24;
     const stageH = stage.clientHeight - 24;
-    const svgW = svg.getBoundingClientRect().width;
-    const svgH = svg.getBoundingClientRect().height;
-
-    if (!stageW || !stageH || !svgW || !svgH) {
+    if (!stageW || !stageH) {
       return;
     }
 
-    const scale = Math.min(stageW / svgW, stageH / svgH, 1);
-    if (scale < 1) {
-      state.scale = scale;
-      state.x = 0;
-      state.y = 0;
-      applyTransform(stage, state);
-    }
+    const fitScale = Math.min(stageW / state.baseW, stageH / state.baseH);
+    const maxScale = allowUpscale ? ZOOM_MAX : 1;
+    state.scale = Math.min(Math.max(fitScale, ZOOM_MIN), maxScale);
+    state.x = 0;
+    state.y = 0;
+    applyView(stage, state);
   }
 
   function bindPan(stage, state) {
@@ -121,7 +154,7 @@
       }
       state.x = origX + dx;
       state.y = origY + dy;
-      applyTransform(stage, state);
+      applyView(stage, state);
     });
 
     function endDrag(event) {
@@ -142,7 +175,7 @@
     stage.addEventListener('pointercancel', endDrag);
   }
 
-  function bindToolbar(toolbar, state, stage, onExpand, fitOnReset) {
+  function bindToolbar(toolbar, state, stage, options) {
     toolbar.addEventListener('click', function (event) {
       const button = event.target.closest('[data-action]');
       if (!button) {
@@ -160,22 +193,37 @@
         state.scale = 1;
         state.x = 0;
         state.y = 0;
-        applyTransform(stage, state);
-        if (fitOnReset) {
+        applyView(stage, state);
+        if (options.fit) {
           requestAnimationFrame(function () {
-            fitToStage(stage, state);
+            fitToStage(stage, state, options.allowUpscale);
           });
         }
         return;
+      } else if (action === 'fullscreen') {
+        options.onFullscreen();
+        return;
       } else if (action === 'expand') {
-        onExpand();
+        options.onExpand();
         return;
       }
-      applyTransform(stage, state);
+      applyView(stage, state);
     });
   }
 
   let lightbox = null;
+  let activeDialog = null;
+
+  function updateFullscreenButton(dialog) {
+    const button = dialog.querySelector('[data-action="fullscreen"]');
+    if (!button) {
+      return;
+    }
+    const isFs = document.fullscreenElement === dialog;
+    button.title = isFs ? 'Exit fullscreen' : 'Fullscreen';
+    button.setAttribute('aria-label', button.title);
+    button.textContent = isFs ? '⛶' : '⛶';
+  }
 
   function ensureLightbox() {
     if (lightbox) {
@@ -186,38 +234,79 @@
     lightbox.className = 'mermaid-lightbox';
     lightbox.hidden = true;
     lightbox.innerHTML = [
-      '<div class="mermaid-lightbox-backdrop" data-action="close"></div>',
       '<div class="mermaid-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Diagram viewer">',
       '  <div class="mermaid-lightbox-header">',
       '    <span class="mermaid-lightbox-title">Diagram</span>',
-      '    <button type="button" class="mermaid-btn mermaid-lightbox-close" data-action="close" aria-label="Close">×</button>',
+      '    <div class="mermaid-lightbox-actions">',
+      '      <button type="button" class="mermaid-btn" data-action="fullscreen" title="Fullscreen" aria-label="Fullscreen">⛶</button>',
+      '      <button type="button" class="mermaid-btn mermaid-lightbox-close" data-action="close" aria-label="Close">×</button>',
+      '    </div>',
       '  </div>',
       '  <div class="mermaid-lightbox-body"></div>',
       '</div>',
     ].join('');
     document.body.appendChild(lightbox);
 
+    const dialog = lightbox.querySelector('.mermaid-lightbox-dialog');
+    activeDialog = dialog;
+
     lightbox.addEventListener('click', function (event) {
-      if (
-        event.target.dataset.action === 'close' ||
-        event.target.classList.contains('mermaid-lightbox-backdrop')
-      ) {
+      if (event.target.dataset.action === 'close') {
         closeLightbox();
+      }
+      if (event.target.dataset.action === 'fullscreen') {
+        toggleFullscreen(dialog);
       }
     });
 
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape' && lightbox && !lightbox.hidden) {
-        closeLightbox();
+        if (document.fullscreenElement) {
+          document.exitFullscreen().catch(function () {
+            closeLightbox();
+          });
+        } else {
+          closeLightbox();
+        }
+      }
+    });
+
+    document.addEventListener('fullscreenchange', function () {
+      if (!lightbox || lightbox.hidden) {
+        return;
+      }
+      updateFullscreenButton(dialog);
+      const figure = lightbox.querySelector('.mermaid-figure--lightbox');
+      const stage = figure && figure.querySelector('.mermaid-stage');
+      if (stage) {
+        requestAnimationFrame(function () {
+          const state = figure._mermaidState;
+          if (state) {
+            fitToStage(stage, state, true);
+          }
+        });
       }
     });
 
     return lightbox;
   }
 
+  function toggleFullscreen(dialog) {
+    if (document.fullscreenElement === dialog) {
+      document.exitFullscreen().catch(function () {});
+      return;
+    }
+    if (dialog.requestFullscreen) {
+      dialog.requestFullscreen().catch(function () {});
+    }
+  }
+
   function closeLightbox() {
     if (!lightbox) {
       return;
+    }
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(function () {});
     }
     lightbox.hidden = true;
     document.body.classList.remove('mermaid-lightbox-open');
@@ -234,7 +323,8 @@
       inner.style.transform = '';
       const svg = inner.querySelector('svg');
       if (svg) {
-        svg.dataset.normalized = 'false';
+        svg.style.width = '';
+        svg.style.height = '';
       }
     }
 
@@ -247,25 +337,29 @@
     const inner = figure.querySelector('.mermaid-inner');
     const state = createState();
 
-    normalizeSvg(inner || figure);
-    applyTransform(stage, state);
+    initSvgMetrics(inner || figure, state);
+    applyView(stage, state);
+    figure._mermaidState = state;
 
     if (options.fit) {
       requestAnimationFrame(function () {
-        fitToStage(stage, state);
+        fitToStage(stage, state, options.allowUpscale);
       });
     }
 
     bindPan(stage, state);
-    bindToolbar(
-      toolbar,
-      state,
-      stage,
-      function () {
+    bindToolbar(toolbar, state, stage, {
+      fit: options.fit,
+      allowUpscale: options.allowUpscale,
+      onExpand: function () {
         openLightbox(figure);
       },
-      options.fit
-    );
+      onFullscreen: function () {
+        if (activeDialog) {
+          toggleFullscreen(activeDialog);
+        }
+      },
+    });
 
     if (options.openOnClick) {
       stage.addEventListener('click', function (event) {
@@ -284,6 +378,7 @@
   function openLightbox(figure) {
     const box = ensureLightbox();
     const body = box.querySelector('.mermaid-lightbox-body');
+    const dialog = box.querySelector('.mermaid-lightbox-dialog');
     body.replaceChildren();
 
     const clone = cloneFigure(figure);
@@ -292,7 +387,13 @@
     box.hidden = false;
     document.body.classList.add('mermaid-lightbox-open');
 
-    wireFigure(clone, { fit: true, openOnClick: false });
+    wireFigure(clone, { fit: true, openOnClick: false, allowUpscale: true });
+
+    requestAnimationFrame(function () {
+      if (dialog.requestFullscreen) {
+        dialog.requestFullscreen().catch(function () {});
+      }
+    });
   }
 
   function wrapDiagram(container) {
@@ -310,7 +411,7 @@
     figure.className = 'mermaid-figure';
     figure.tabIndex = 0;
 
-    const toolbar = createToolbar();
+    const toolbar = createToolbar(false);
     const stage = document.createElement('div');
     stage.className = 'mermaid-stage';
 
@@ -326,7 +427,7 @@
     stage.appendChild(inner);
     inner.appendChild(container);
 
-    wireFigure(figure, { fit: true, openOnClick: true });
+    wireFigure(figure, { fit: true, openOnClick: true, allowUpscale: false });
   }
 
   function attachAll() {

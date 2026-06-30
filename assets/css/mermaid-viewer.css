@@ -60,7 +60,8 @@
   width: max-content;
   max-width: none;
   margin: 0 auto;
-  transform-origin: center center;
+  /* translate only — never scale() here (causes SVG blur) */
+  transform-origin: 0 0;
 }
 
 .mermaid-inner pre.mermaid,
@@ -77,15 +78,14 @@
 
 .mermaid-inner svg {
   display: block !important;
-  width: auto !important;
-  height: auto !important;
   max-width: none !important;
   max-height: none !important;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
 }
 
 .post-content .mermaid-figure .mermaid-inner svg,
 .post-content .mermaid-figure pre.mermaid svg {
-  width: auto !important;
   max-width: none !important;
 }
 
@@ -113,40 +113,41 @@
   border-top: 1px solid var(--border-color);
 }
 
+/* Full viewport overlay */
 .mermaid-lightbox {
   position: fixed;
   inset: 0;
   z-index: 9999;
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
   padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
 }
 
 .mermaid-lightbox[hidden] {
   display: none !important;
 }
 
-.mermaid-lightbox-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-}
-
 .mermaid-lightbox-dialog {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  max-width: none;
-  max-height: none;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
   margin: 0;
   border: none;
   border-radius: 0;
   background: var(--card-bg);
   box-shadow: none;
+}
+
+.mermaid-lightbox-dialog:fullscreen {
+  width: 100%;
+  height: 100%;
+  background: var(--card-bg);
 }
 
 .mermaid-lightbox-header {
@@ -156,6 +157,12 @@
   flex: 0 0 auto;
   padding: 0.5rem 0.75rem;
   border-bottom: 1px solid var(--border-color);
+}
+
+.mermaid-lightbox-actions {
+  display: flex;
+  gap: 4px;
+  align-items: center;
 }
 
 .mermaid-lightbox-title {
