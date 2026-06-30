@@ -37,73 +37,70 @@ Original modular design: bot inside Matrix homeserver, STT → GraphRAG → Olla
 
 ```mermaid
 flowchart TD
-  subgraph Client["Element Client Web X"]
-    User["User text voice call"]
-    Element["Element interface"]
-  end
+    subgraph Client["Element Client (Web/X)"]
+        User[User - Text/Voice/Call]
+        Element[Element Interface]
+    end
 
-  subgraph Matrix["Matrix Homeserver"]
-    Synapse["Synapse server"]
-    Coturn["coturn TURN STUN"]
-    LiveKit["LiveKit SFU MatrixRTC"]
-    Bot["Knowledge bot service"]
-  end
+    subgraph Matrix["Matrix Homeserver"]
+        Synapse[Synapse Server]
+        Coturn[coturn TURN/STUN]
+        LiveKit[LiveKit SFU - MatrixRTC]
+        Bot[Knowledge Bot Service]
+    end
 
-  subgraph Voice["Voice pipeline"]
-    STT["STT Faster-Whisper or Vosk"]
-    TTS["TTS Piper or Coqui"]
-  end
+    subgraph Voice["Voice Pipeline"]
+        STT[STT: Faster-Whisper / Vosk]
+        TTS[TTS: Piper / Coqui]
+    end
 
-  subgraph RAG["GraphRAG layer"]
-    Qdrant["Qdrant semantic vectors"]
-    Neo4j["Neo4j association graph"]
-    Ingest["Ingestor Markdown to graph"]
-  end
+    subgraph RAG["GraphRAG Layer"]
+        Qdrant[Qdrant - Semantic Vectors]
+        Neo4j[Neo4j - Association Graph]
+        Ingest[Ingestor: Markdown → Graph + Embeddings]
+    end
 
-  subgraph AI["AI inference"]
-    LLM["Ollama Gemma Bonsai humanize"]
-  end
+    subgraph AI["AI Inference"]
+        LLM[Local LLM: Gemma / Bonsai / Ollama - Humanize + Generate]
+    end
 
-  subgraph Storage["Persistence"]
-    KB["Knowledge base Markdown files"]
-    Feedback["Feedback store"]
-  end
+    subgraph Storage["Persistence"]
+        KB[Knowledge Base: Markdown / Files]
+        Feedback[Feedback Store]
+    end
 
-  User -->|text or audio| Element
-  Element -->|signaling events| Synapse
-  Synapse -->|signaling events| Element
-  Element -->|media streams| LiveKit
-  LiveKit -->|media streams| Element
-  Element -->|WebRTC media| Coturn
-  Synapse -->|bot events| Bot
-  Bot -->|bot events| Synapse
-  LiveKit -->|bot joins calls| Bot
-  Bot -->|bot joins calls| LiveKit
+    %% Flows
+    User -->|Text or Audio| Element
+    Element <-->|Signaling & Events| Synapse
+    Element <-->|Media Streams Calls| LiveKit
+    Synapse <-->|Bot Events| Bot
+    LiveKit <-->|Bot joins calls| Bot
 
-  Bot -->|audio stream| STT
-  STT -->|transcript text| Bot
-  Bot -->|semantic search| Qdrant
-  Bot -->|graph traversal| Neo4j
-  Qdrant -->|retrieved context| Bot
-  Neo4j -->|retrieved context| Bot
-  Bot -->|prompt plus context| LLM
-  LLM -->|generated response| Bot
-  Bot -->|text reply| Element
-  Bot -->|audio reply| TTS
-  TTS -->|voice message| Element
+    Bot -->|Audio Stream| STT
+    STT -->|Transcribed Text| Bot
+    Bot -->|Semantic Search| Qdrant
+    Bot -->|Graph Traversal| Neo4j
+    Qdrant & Neo4j -->|Retrieved Context| Bot
+    Bot -->|Full Prompt + Context| LLM
+    LLM -->|Generated Response| Bot
+    Bot -->|Text Reply| Element
+    Bot -->|Audio Reply| TTS
+    TTS -->|Voice Message| Element
 
-  KB -->|ingest| Ingest
-  Ingest -->|chunks and entities| Qdrant
-  Ingest -->|nodes and edges| Neo4j
+    KB -->|Ingest| Ingest
+    Ingest -->|Chunks & Entities| Qdrant
+    Ingest -->|Nodes & Edges| Neo4j
 
-  User -->|reaction feedback| Bot
-  Bot -->|store refined data| Feedback
-  Feedback -->|update| Ingest
+    User -->|Reaction / Feedback| Bot
+    Bot -->|Store Refined Data| Feedback
+    Feedback -->|Update| Ingest
 
-  style Bot fill:#e1f5fe
-  style LLM fill:#f3e5f5
-  style LiveKit fill:#e8f5e8
-```
+    style Bot fill:#e1f5fe
+    style LLM fill:#f3e5f5
+    style LiveKit fill:#e8f5e8
+``` 
+
+
 
 ## Architecture MVP v2 — Wan Streamer lane
 
@@ -213,13 +210,13 @@ sequenceDiagram
 
 ## Rollout
 
-| Phase | Deliverable |
-|-------|-------------|
-| 1 | Text `!brain` RAG (shipped in go-second-brain) |
-| 2 | Voice message STT → RAG → TTS |
-| 3 | Element Call / LiveKit bot join |
-| 4 | Reaction feedback → graph + vector store |
-| 5 | [Wan Streamer](https://wan-streamer.com/) — end-to-end duplex voice/video when available (~500 ms vs modular STT+RAG+TTS) |
+| Phase | Deliverable                                                                                                               |
+| ----- | ------------------------------------------------------------------------------------------------------------------------- |
+| 1     | Text `!brain` RAG (shipped in go-second-brain)                                                                            |
+| 2     | Voice message STT → RAG → TTS                                                                                             |
+| 3     | Element Call / LiveKit bot join                                                                                           |
+| 4     | Reaction feedback → graph + vector store                                                                                  |
+| 5     | [Wan Streamer](https://wan-streamer.com/) — end-to-end duplex voice/video when available (~500 ms vs modular STT+RAG+TTS) |
 
 ## Next version — Wan Streamer
 
