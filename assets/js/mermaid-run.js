@@ -1,6 +1,6 @@
 /**
- * Chirpy calls mermaid.initialize() on load but never mermaid.init()/run().
- * Mermaid v11 removed init(); diagrams only appeared after theme toggle.
+ * Chirpy calls mermaid.initialize() with the correct site theme.
+ * We only run pending diagrams and attach the viewer — do not override theme.
  */
 (function () {
   'use strict';
@@ -22,47 +22,59 @@
     }
   }
 
-  function render() {
+  function runMermaid() {
     if (typeof mermaid === 'undefined') {
-      return;
+      return Promise.resolve();
     }
 
     shimInit();
 
-    const nodes = document.querySelectorAll('pre.mermaid');
+    const nodes = document.querySelectorAll('pre.mermaid:not([data-processed])');
     if (!nodes.length) {
-      return;
+      attachViewer();
+      return Promise.resolve();
     }
 
-    const dark =
-      document.documentElement.getAttribute('data-mode') === 'dark' ||
-      (document.documentElement.getAttribute('data-mode') === null &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (typeof mermaid.run === 'function') {
+      return Promise.resolve(mermaid.run({ nodes: [...nodes] }));
+    }
+    if (typeof mermaid.init === 'function') {
+      return Promise.resolve(mermaid.init(null, 'pre.mermaid'));
+    }
+    return Promise.resolve();
+  }
 
-    mermaid.initialize({ startOnLoad: false, theme: dark ? 'dark' : 'default' });
-
-    const run = () => {
-      let promise;
-      if (typeof mermaid.run === 'function') {
-        promise = mermaid.run({ nodes: [...nodes] });
-      } else if (typeof mermaid.init === 'function') {
-        promise = Promise.resolve(mermaid.init(null, 'pre.mermaid'));
-      } else {
-        return;
-      }
-      Promise.resolve(promise).then(attachViewer).catch(attachViewer);
+  function render() {
+    const start = () => {
+      runMermaid().then(attachViewer).catch(attachViewer);
     };
 
     if (document.fonts && document.fonts.ready) {
-      const timeout = setTimeout(run, 2500);
+      const timeout = setTimeout(start, 2500);
       document.fonts.ready.then(() => {
         clearTimeout(timeout);
-        run();
+        start();
       });
     } else {
-      run();
+      start();
     }
   }
 
   render();
+
+  // Re-run when Chirpy toggles light/dark (it updates data-mode and re-inits mermaid).
+  const observer = new MutationObserver(function (mutations) {
+    for (const mutation of mutations) {
+      if (mutation.attributeName === 'data-mode') {
+        setTimeout(function () {
+          runMermaid().then(attachViewer).catch(attachViewer);
+        }, 50);
+        break;
+      }
+    }
+  });
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-mode'],
+  });
 })();

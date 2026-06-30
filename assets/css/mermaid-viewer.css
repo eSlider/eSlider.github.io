@@ -1,9 +1,9 @@
 .mermaid-figure {
   position: relative;
   margin: 1.5rem 0;
-  border: 1px solid var(--border-color, #3d444d);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  background: var(--card-bg, #161b22);
+  background: var(--card-bg);
   overflow: hidden;
 }
 
@@ -16,8 +16,9 @@
   gap: 4px;
   padding: 4px;
   border-radius: 6px;
-  background: rgba(13, 17, 23, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.15s ease;
@@ -37,6 +38,7 @@
   padding: 1rem;
   text-align: center;
   touch-action: none;
+  background: transparent;
 }
 
 .mermaid-stage.is-dragging {
@@ -68,7 +70,7 @@
   border: none;
   border-radius: 4px;
   background: transparent;
-  color: #e6edf3;
+  color: var(--text-color);
   cursor: pointer;
   font-size: 15px;
   line-height: 1;
@@ -76,14 +78,14 @@
 }
 
 .mermaid-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--btn-border-color);
 }
 
 .mermaid-hint {
   padding: 0.35rem 0.75rem;
   font-size: 0.75rem;
-  color: var(--text-muted-color, #8b949e);
-  border-top: 1px solid var(--border-color, #3d444d);
+  color: var(--text-muted-color);
+  border-top: 1px solid var(--border-color);
 }
 
 .mermaid-lightbox {
@@ -103,7 +105,7 @@
 .mermaid-lightbox-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(1, 4, 9, 0.82);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .mermaid-lightbox-dialog {
@@ -113,10 +115,10 @@
   max-height: 92vh;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border-color, #3d444d);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
-  background: var(--card-bg, #0d1117);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+  background: var(--card-bg);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
 }
 
 .mermaid-lightbox-header {
@@ -124,12 +126,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 0.75rem;
-  border-bottom: 1px solid var(--border-color, #3d444d);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .mermaid-lightbox-title {
   font-size: 0.875rem;
-  color: var(--text-muted-color, #8b949e);
+  color: var(--text-muted-color);
 }
 
 .mermaid-lightbox-close {
