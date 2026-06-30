@@ -7,7 +7,7 @@ order: 5
 
 **Andriy Oblivantsev** — senior backend and data engineer in **Santa Cruz de Tenerife, Spain** (remote-friendly, **CET**).
 
-Software since **2001** (IT apprenticeship in Nuremberg); **20+ years** shipping web, GIS, data platforms, and self-hosted infrastructure. The through-line is the same problem in different eras: **turn messy sources into reliable, observable systems** — PHP/CMS and Flash client sites, Java/Oracle backends, **Mapbender** geoportals, **Go/PostGIS** marketplace search, **Python/k8s/dbt** enterprise ETL, and today **Graph RAG + production voice** on Matrix under [produktor.io](https://produktor.io).
+Software since **2001** (IT apprenticeship in Nuremberg); **20+ years** shipping web, GIS, data platforms, and self-hosted infrastructure. The through-line is the same problem in different eras: **turn messy sources into reliable, observable systems** — PHP/CMS and Flash client sites, Java/Oracle backends, **Mapbender** geoportals, **Go/PostGIS** marketplace search, **Python/dbt** CRM ETL (Dyvenia), and today **Graph RAG + production voice** on Matrix under [produktor.io](https://produktor.io).
 
 **Contact**: [eslider@gmail.com](mailto:eslider@gmail.com) · [GitHub](https://github.com/eSlider) · [produktor.io](https://produktor.io)
 
@@ -39,14 +39,14 @@ Repo inventory and metrics: [**Projects**](/projects/) tab (**62** original repo
 |--------|------------|-------|-------|
 | 2025–present | **Freelance** (ProProdukt SL) | Graph RAG, WebRTC, agents, trading | [produktor.io](/posts/produktor-io-proprodukt/) |
 | 2024–2025 | **Markets Platform** (contract) | TradePlatform backend (~2k commits) | [Markets Platform](/posts/markets-platform-tradeplatform/) |
-| 2023–2025 | **Dyvenia** (employee) | Atttiva/IDflow, k8s, dbt, data quality | [Dyvenia](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/) |
+| 2023–2025 | **Dyvenia** (employee) | **Python** ETL — Atttiva/IDflow, FastAPI, dbt, CRM pipelines | [Dyvenia](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/) |
 | 2019–2021 | **Immowelt AG** (employee) | Go geosearch 80M+ addresses, AWS serverless | [Immowelt](/posts/immowelt-geospatial-search/) |
 | 2014–2018 | **WhereGroup** (employee) | **Mapbender** product — Digitizer, 1M+ users | [WhereGroup](/posts/wheregroup-mapbender-gis/) |
 | 2012–2013 | **Keynote SIGOS** (employee) | Java, Oracle/MySQL/PostgreSQL backends | [SIGOS](/posts/keynote-sigos-backend-databases/) |
 | 2006–2012 | **GRID** subcontractor | PHP/CMS via VisBack/VisCMS — 50+ client sites | [GRID](/posts/grid-gmbh-cms-clients/) · [gridfactor.de](https://gridfactor.de/) |
 | 2006–present | **ProProdukt SL** (own company) | VisCreation → produktor.io — always parallel | [VisCreation era](/posts/viscreation-magento-cms-era/) |
 
-Other client work: [Pack und Cup](/posts/pack-cup-ecommerce-freelance/) (2016–2023) · [Dreamteam HOCR](/posts/dreamteam-hocr-pipelines/) (2022–2023) · [NAI / Edelweiss healthcare](/posts/nai-edelweiss-healthcare-knowledge-base/) (2025–present).
+Other client work: [Pack und Cup](/posts/pack-cup-ecommerce-freelance/) (2016–2023) · [Dreamteam HOCR](/posts/dreamteam-hocr-pipelines/) (2022–2023) · [Edelweiss healthcare](/posts/edelweiss-healthcare-knowledge-base/) (2025–present).
 
 ---
 

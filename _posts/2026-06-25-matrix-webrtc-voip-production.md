@@ -88,6 +88,6 @@ Docker Compose · Synapse · Element Web/X · coturn · LiveKit · lk-jwt-servic
 
 ## Related
 
-[produktor.io](/posts/produktor-io-proprodukt/) · [Docker Compose patterns](/posts/docker-compose-stack-patterns/) · [go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) · [Markets Platform](/posts/markets-platform-tradeplatform/) · [NAI / Edelweiss](/posts/nai-edelweiss-healthcare-knowledge-base/) · [self-ca](/posts/self-ca-private-certificates/) (TLS for private Matrix/Gitea hosts)
+[produktor.io](/posts/produktor-io-proprodukt/) · [Docker Compose patterns](/posts/docker-compose-stack-patterns/) · [go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) · [Markets Platform](/posts/markets-platform-tradeplatform/) · [Edelweiss](/posts/edelweiss-healthcare-knowledge-base/) · [Edelweiss video assistant](/posts/edelweiss-video-assistant-mvp/) · [self-ca](/posts/self-ca-private-certificates/) (TLS for private Matrix/Gitea hosts)
 
 **Portfolio detail**: [github.com/eSlider/cv — matrix-rtc-voip](https://github.com/eSlider/cv/blob/main/projects/matrix-rtc-voip/overview.md)
