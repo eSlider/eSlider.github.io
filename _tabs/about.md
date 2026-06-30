@@ -22,7 +22,7 @@ Freelance via **[ProProdukt SL](https://eslider.github.io/posts/produktor-io-pro
 | Area | What | Read more |
 |------|------|-----------|
 | **Knowledge RAG** | Markdown → Neo4j + Qdrant → Matrix bot / voice | [go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) |
-| **Voice / WebRTC** | Synapse, coturn, LiveKit, Jitsi — ~2 years production across 3 orgs | [Matrix / VoIP](/posts/matrix-webrtc-voip-production/) |
+| **Voice / WebRTC** | Synapse, coturn, LiveKit, Jitsi — ~2 years production across 3 orgs | [Matrix / VoIP](/posts/edelweiss-video-assistant-mvp/) |
 | **Agent delivery** | Gitea issues → PR automation, Telegram | [ai-fabric](/posts/ai-fabric-agent-delivery/) |
 | **Platform ops** | k3s, OnlyOffice, Gitea, Ollama, Grafana/Loki | [produktor stack](/posts/produktor-platform-self-hosted-stack/) |
 | **Go libraries** | Config merge, OnlyOffice `oo` CLI, hOCR, Ollama clients | [toolkit](/posts/go-libraries-toolkit/) · [go-config essay](/posts/go-config-many-good-pieces-no-whole-picture/) |

@@ -26,7 +26,7 @@ description: "~2,000+ commits on trading platform — consumers, APIs, React/MUI
 | `grafana` + `loki` + `promtail` | Observability |
 | `n8n` | Workflow automation |
 | `ws` | WebSocket service |
-| Matrix chat (Illja) | Synapse, Element PWA, coturn — see [WebRTC stacks](/posts/matrix-webrtc-voip-production/) |
+| Matrix chat (Illja) | Synapse, Element PWA, coturn — see [WebRTC stacks](/posts/edelweiss-video-assistant-mvp/) |
 
 ## Tech stack
 

@@ -40,10 +40,10 @@ Matrix knowledge bot for Element — text, voice messages, and calls. **STT** �
 
 Homeservers **`chat.pro-dukt.de`** and **`chat.medex-pflegedienst.de`** run the same RTC model as produktor (Synapse, coturn, LiveKit paths), federated with **`chat.produktor.io`**.
 
-See [Matrix / WebRTC / VoIP production stacks](/posts/matrix-webrtc-voip-production/) for TURN, LiveKit SFU, and three-org federation ops.
+See [Matrix / WebRTC / VoIP production stacks](/posts/edelweiss-video-assistant-mvp/) for TURN, LiveKit SFU, and three-org federation ops.
 
 ## Related
 
-[go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) · [Video assistant MVP](/posts/edelweiss-video-assistant-mvp/) · [Matrix / WebRTC](/posts/matrix-webrtc-voip-production/) · [produktor.io](/posts/produktor-io-proprodukt/)
+[go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) · [Video assistant MVP](/posts/edelweiss-video-assistant-mvp/) · [produktor.io](/posts/produktor-io-proprodukt/)
 
 **Portfolio detail**: [github.com/eSlider/cv — edelweiss](https://github.com/eSlider/cv/blob/main/projects/edelweiss/overview.md)

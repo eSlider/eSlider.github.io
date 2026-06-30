@@ -32,7 +32,7 @@ Continues the [company line](/posts/produktor-io-proprodukt/) after the [VisCrea
 | `ollama-intel-gpu/` | Ollama (SYCL), Open WebUI |
 | `vidarr/` | AI bot + Grafana/Loki/Prometheus |
 | `produktor/orange/gitea` | Gitea, MinIO, NPM, act_runner |
-| `produktor/orange/chat` | Synapse, Element, coturn, LiveKit, Jitsi — [WebRTC post](/posts/matrix-webrtc-voip-production/) |
+| `produktor/orange/chat` | Synapse, Element, coturn, LiveKit, Jitsi — [WebRTC post](/posts/edelweiss-video-assistant-mvp/) |
 | `produktor/orange/n8n` | Workflow automation |
 | `produktor/orange/mailing` | docker-mailserver |
 

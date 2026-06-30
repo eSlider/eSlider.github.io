@@ -60,7 +60,7 @@ Used in: [trading sync](/posts/trading-algorithms-binance-sync/), Markets Platfo
 
 **Synapse + Element + coturn** is the baseline; **LiveKit + lk-jwt** adds MatrixRTC (Element Call / Element X group calls). Optional **Jitsi Meet** profile for on-prem conference rooms.
 
-- [Matrix / WebRTC / VoIP](/posts/matrix-webrtc-voip-production/) — three federated orgs, WAN port-forward tables, ICE debugging
+- [Matrix / WebRTC / VoIP](/posts/edelweiss-video-assistant-mvp/) — three federated orgs, WAN port-forward tables, ICE debugging
 - [go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) — Matrix bot + voice on the same homeserver
 - Markets Platform Illja contract — Element PWA + Synapse + coturn
 
@@ -75,4 +75,4 @@ Operational habit: keep coturn `external-ip` and LiveKit `rtc.node_ip` on the **
 
 ## Related stacks
 
-[produktor.io](/posts/produktor-io-proprodukt/) · [AI Fabric](/posts/self-hosted-ai-delivery-fabric/) · [Analytics stack](/posts/analytics-stack-multi-engine/) · [Matrix / WebRTC](/posts/matrix-webrtc-voip-production/)
+[produktor.io](/posts/produktor-io-proprodukt/) · [AI Fabric](/posts/self-hosted-ai-delivery-fabric/) · [Analytics stack](/posts/analytics-stack-multi-engine/) · [Matrix / WebRTC](/posts/edelweiss-video-assistant-mvp/)

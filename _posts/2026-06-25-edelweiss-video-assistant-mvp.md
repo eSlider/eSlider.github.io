@@ -13,7 +13,7 @@ Matrix-native **knowledge assistant** for healthcare users in **Element**: conve
 
 ## Builds on
 
-- [Matrix / WebRTC / VoIP production](/posts/matrix-webrtc-voip-production/) — Synapse, coturn, LiveKit
+- **Matrix / WebRTC stack** — Synapse, coturn, LiveKit (architecture below)
 - [go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) — GraphRAG bot SDK
 - [Edelweiss healthcare stack](/posts/edelweiss-healthcare-knowledge-base/) — pflege homeservers
 
@@ -154,4 +154,4 @@ GraphRAG (Qdrant + Neo4j) remains the **knowledge layer**; Wan Streamer becomes 
 
 ## Related
 
-[go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) · [Matrix VoIP](/posts/matrix-webrtc-voip-production/) · [Bonsai Ollama proxy](/posts/bonsai-ollama-q1-proxy/)
+[go-second-brain](/posts/go-second-brain-knowledge-graph-rag/) · [Edelweiss healthcare](/posts/edelweiss-healthcare-knowledge-base/) · [Bonsai Ollama proxy](/posts/bonsai-ollama-q1-proxy/)
