@@ -33,9 +33,10 @@
 }
 
 .mermaid-stage {
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
-  min-height: min(55vh, 640px);
+  min-height: 12rem;
   max-height: min(80vh, 900px);
   cursor: grab;
   padding: 1rem;
@@ -57,23 +58,34 @@
 
 .mermaid-inner {
   display: block;
-  width: max-content;
-  max-width: none;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   /* translate only — never scale() here (causes SVG blur) */
   transform-origin: 0 0;
 }
 
+.mermaid-figure--lightbox .mermaid-inner {
+  width: max-content;
+  max-width: none;
+}
+
 .mermaid-inner pre.mermaid,
 .mermaid-inner div.mermaid {
   display: block !important;
-  width: max-content !important;
-  max-width: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
   margin: 0 !important;
   background: transparent !important;
   border: none !important;
   padding: 0 !important;
   overflow: visible !important;
+}
+
+.mermaid-figure--lightbox .mermaid-inner pre.mermaid,
+.mermaid-figure--lightbox .mermaid-inner div.mermaid {
+  width: max-content !important;
+  max-width: none !important;
 }
 
 .mermaid-inner svg {

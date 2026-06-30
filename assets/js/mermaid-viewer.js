@@ -33,7 +33,12 @@
   }
 
   function createState() {
-    return { scale: 1, x: 0, y: 0, baseW: 0, baseH: 0 };
+    return { scale: 1, x: 0, y: 0, baseW: 0, baseH: 0, autoFit: true };
+  }
+
+  function stagePadding(stage) {
+    const style = getComputedStyle(stage);
+    return parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
   }
 
   function parseViewBox(svg) {
@@ -101,24 +106,46 @@
     inner.style.transform = 'translate(' + state.x + 'px, ' + state.y + 'px)';
   }
 
-  function fitToStage(stage, state, allowUpscale) {
+  function fitToStage(stage, state, fitOptions) {
     const inner = stage.querySelector('.mermaid-inner');
     if (!inner || !initSvgMetrics(inner, state)) {
       return;
     }
 
-    const stageW = stage.clientWidth - 24;
-    const stageH = stage.clientHeight - 24;
-    if (!stageW || !stageH) {
+    const pad = stagePadding(stage);
+    const stageW = stage.clientWidth - pad;
+    if (!stageW) {
       return;
     }
 
-    const fitScale = Math.min(stageW / state.baseW, stageH / state.baseH);
-    const maxScale = allowUpscale ? ZOOM_MAX : 1;
+    let fitScale = stageW / state.baseW;
+    if (fitOptions.mode === 'contain') {
+      const stageH = stage.clientHeight - pad;
+      if (!stageH) {
+        return;
+      }
+      fitScale = Math.min(stageW / state.baseW, stageH / state.baseH);
+    }
+
+    const maxScale = fitOptions.allowUpscale ? ZOOM_MAX : 1;
     state.scale = Math.min(Math.max(fitScale, ZOOM_MIN), maxScale);
     state.x = 0;
     state.y = 0;
+    state.autoFit = true;
     applyView(stage, state);
+  }
+
+  function bindResize(stage, state, fitOptions) {
+    if (typeof ResizeObserver === 'undefined') {
+      return;
+    }
+
+    const observer = new ResizeObserver(function () {
+      if (state.autoFit) {
+        fitToStage(stage, state, fitOptions);
+      }
+    });
+    observer.observe(stage);
   }
 
   function bindPan(stage, state) {
@@ -152,6 +179,7 @@
       if (Math.hypot(dx, dy) > CLICK_TOLERANCE) {
         moved = true;
       }
+      state.autoFit = false;
       state.x = origX + dx;
       state.y = origY + dy;
       applyView(stage, state);
@@ -186,8 +214,10 @@
 
       const action = button.dataset.action;
       if (action === 'zoom-in') {
+        state.autoFit = false;
         state.scale = Math.min(ZOOM_MAX, state.scale + ZOOM_STEP);
       } else if (action === 'zoom-out') {
+        state.autoFit = false;
         state.scale = Math.max(ZOOM_MIN, state.scale - ZOOM_STEP);
       } else if (action === 'reset') {
         state.scale = 1;
@@ -196,7 +226,7 @@
         applyView(stage, state);
         if (options.fit) {
           requestAnimationFrame(function () {
-            fitToStage(stage, state, options.allowUpscale);
+            fitToStage(stage, state, options.fitOptions);
           });
         }
         return;
@@ -282,7 +312,7 @@
         requestAnimationFrame(function () {
           const state = figure._mermaidState;
           if (state) {
-            fitToStage(stage, state, true);
+            fitToStage(stage, state, { mode: 'contain', allowUpscale: true });
           }
         });
       }
@@ -338,19 +368,23 @@
     const state = createState();
 
     initSvgMetrics(inner || figure, state);
-    applyView(stage, state);
     figure._mermaidState = state;
+
+    const fitOptions = options.fitOptions || { mode: 'width', allowUpscale: false };
 
     if (options.fit) {
       requestAnimationFrame(function () {
-        fitToStage(stage, state, options.allowUpscale);
+        fitToStage(stage, state, fitOptions);
+        bindResize(stage, state, fitOptions);
       });
+    } else {
+      applyView(stage, state);
     }
 
     bindPan(stage, state);
     bindToolbar(toolbar, state, stage, {
       fit: options.fit,
-      allowUpscale: options.allowUpscale,
+      fitOptions: fitOptions,
       onExpand: function () {
         openLightbox(figure);
       },
@@ -387,7 +421,11 @@
     box.hidden = false;
     document.body.classList.add('mermaid-lightbox-open');
 
-    wireFigure(clone, { fit: true, openOnClick: false, allowUpscale: true });
+    wireFigure(clone, {
+      fit: true,
+      openOnClick: false,
+      fitOptions: { mode: 'contain', allowUpscale: true },
+    });
 
     requestAnimationFrame(function () {
       if (dialog.requestFullscreen) {
@@ -427,7 +465,11 @@
     stage.appendChild(inner);
     inner.appendChild(container);
 
-    wireFigure(figure, { fit: true, openOnClick: true, allowUpscale: false });
+    wireFigure(figure, {
+      fit: true,
+      openOnClick: true,
+      fitOptions: { mode: 'width', allowUpscale: false },
+    });
   }
 
   function attachAll() {
