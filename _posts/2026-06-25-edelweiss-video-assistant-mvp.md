@@ -1,6 +1,7 @@
 ---
 title: "Edelweiss — Video Assistant MVP (Matrix + GraphRAG)"
 date: 2026-06-25 12:00:00 +0000
+last_modified_at: 2026-06-30 14:00:00 +0000
 categories: [Projects, Software Architectures]
 tags: [Healthcare, Matrix, WebRTC, Neo4j, Qdrant, RAG, Ollama, STT, TTS]
 description: "MVP: Element assistant bot — voice/text → STT → GraphRAG → Ollama humanize → TTS, with feedback into Qdrant and Neo4j."
@@ -128,7 +129,7 @@ flowchart TB
         
         Element <-->|Signaling & Events| Synapse
         Element -->|WebRTC Media 1-1| Coturn
-        Element <-->|Group Calls SFU| LiveKit
+        Element <-->|Group Calls SFU| LiveKit 
     end
 
     Bot["🤖 Knowledge Bot Service<br>(Matrix Bot)"]:::bot

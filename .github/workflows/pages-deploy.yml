@@ -19,10 +19,11 @@ permissions:
   id-token: write
   actions: read
 
-# Allow one concurrent deployment
+# Serialize Pages deploys; do not cancel an in-flight deploy (rapid manual
+# re-runs were leaving the site on an older artifact).
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
