@@ -16,6 +16,12 @@
     }
   }
 
+  function attachViewer() {
+    if (window.MermaidViewer && typeof window.MermaidViewer.attachAll === 'function') {
+      window.MermaidViewer.attachAll();
+    }
+  }
+
   function render() {
     if (typeof mermaid === 'undefined') {
       return;
@@ -36,11 +42,15 @@
     mermaid.initialize({ startOnLoad: false, theme: dark ? 'dark' : 'default' });
 
     const run = () => {
+      let promise;
       if (typeof mermaid.run === 'function') {
-        mermaid.run({ nodes: [...nodes] });
+        promise = mermaid.run({ nodes: [...nodes] });
       } else if (typeof mermaid.init === 'function') {
-        mermaid.init(null, 'pre.mermaid');
+        promise = Promise.resolve(mermaid.init(null, 'pre.mermaid'));
+      } else {
+        return;
       }
+      Promise.resolve(promise).then(attachViewer).catch(attachViewer);
     };
 
     if (document.fonts && document.fonts.ready) {

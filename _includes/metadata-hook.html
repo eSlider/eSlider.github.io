@@ -1,4 +1,6 @@
 <!-- Custom metadata and deferred scripts (runs after Chirpy post.min.js) -->
 {% if page.mermaid %}
+<link rel="stylesheet" href="{{ '/assets/css/mermaid-viewer.css' | relative_url }}">
+<script defer src="{{ '/assets/js/mermaid-viewer.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/mermaid-run.js' | relative_url }}"></script>
 {% endif %}

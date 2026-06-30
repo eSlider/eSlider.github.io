@@ -1,0 +1,157 @@
+.mermaid-figure {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border-color, #3d444d);
+  border-radius: 8px;
+  background: var(--card-bg, #161b22);
+  overflow: hidden;
+}
+
+.mermaid-toolbar {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 6px;
+  background: rgba(13, 17, 23, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.mermaid-figure:hover .mermaid-toolbar,
+.mermaid-figure:focus-within .mermaid-toolbar,
+.mermaid-figure--lightbox .mermaid-toolbar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mermaid-stage {
+  overflow: auto;
+  max-height: min(70vh, 720px);
+  cursor: grab;
+  padding: 1rem;
+  text-align: center;
+  touch-action: none;
+}
+
+.mermaid-stage.is-dragging {
+  cursor: grabbing;
+}
+
+.mermaid-inner {
+  display: inline-block;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.mermaid-inner pre.mermaid,
+.mermaid-inner div.mermaid {
+  margin: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.mermaid-inner svg {
+  max-width: none;
+  height: auto;
+}
+
+.mermaid-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #e6edf3;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  padding: 0;
+}
+
+.mermaid-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.mermaid-hint {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-muted-color, #8b949e);
+  border-top: 1px solid var(--border-color, #3d444d);
+}
+
+.mermaid-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.mermaid-lightbox[hidden] {
+  display: none !important;
+}
+
+.mermaid-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(1, 4, 9, 0.82);
+}
+
+.mermaid-lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(96vw, 1400px);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color, #3d444d);
+  border-radius: 10px;
+  background: var(--card-bg, #0d1117);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
+
+.mermaid-lightbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border-color, #3d444d);
+}
+
+.mermaid-lightbox-title {
+  font-size: 0.875rem;
+  color: var(--text-muted-color, #8b949e);
+}
+
+.mermaid-lightbox-close {
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+}
+
+.mermaid-lightbox-body {
+  padding: 0.75rem;
+  overflow: hidden;
+}
+
+.mermaid-lightbox-body .mermaid-figure {
+  margin: 0;
+  border: none;
+}
+
+.mermaid-lightbox-body .mermaid-stage {
+  max-height: calc(92vh - 5rem);
+}
+
+body.mermaid-lightbox-open {
+  overflow: hidden;
+}
