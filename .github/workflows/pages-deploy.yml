@@ -51,6 +51,12 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
+      - name: Include static business card
+        run: |
+          if [ -d artem-maltschenko ]; then
+            cp -a artem-maltschenko "_site${{ steps.pages.outputs.base_path }}/artem-maltschenko"
+          fi
+
       - name: Test site
         run: |
           bundle exec htmlproofer _site \
