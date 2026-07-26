@@ -98,6 +98,8 @@ Research prototypes and PoCs — not all have long-form posts yet.
 
 ## Companies & engagements
 
+See the dedicated **[Clients](/clients/)** tab for engagements with project and post links.
+
 | Engagement | Period | Post |
 |------------|--------|------|
 | Pack und Cup GmbH (freelance) | 2016–2023 | [E-commerce client](/posts/pack-cup-ecommerce-freelance/) |
@@ -106,7 +108,7 @@ Research prototypes and PoCs — not all have long-form posts yet.
 | Markets Platform | 2024–2025 | [TradePlatform](/posts/markets-platform-tradeplatform/) |
 | Dyvenia | 2023–2025 | [Python data engineering](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/) |
 | Immowelt AG | 2019–2021 | [Geospatial search](/posts/immowelt-geospatial-search/) |
-| WhereGroup / Mapbender | 2014–2018 | [GIS product](/posts/wheregroup-mapbender-gis/) |
+| WhereGroup / Mapbender | 2014–2018 | [GIS product](/posts/wheregroup-mapbender-gis/) · [Clients](/clients/#wheregroup--product--public-sector-deliveries) |
 | Keynote SIGOS | 2012–2013 | [Backend / RDBMS](/posts/keynote-sigos-backend-databases/) |
 | Dreamteam (client) | 2022–2023 | [HOCR pipelines](/posts/dreamteam-hocr-pipelines/) |
 | VisCreation era | 2006–2022 | [VisCMS / Magento](/posts/viscreation-magento-cms-era/) |

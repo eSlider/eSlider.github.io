@@ -29,7 +29,7 @@ Freelance via **[ProProdukt SL](https://eslider.github.io/posts/produktor-io-pro
 
 **Writing**: [Go config: many good pieces, no whole picture](https://medium.com/@andreyoblivantsev/go-config-many-good-pieces-no-whole-picture-039ec77193be) (Medium, **2026-05-02**) — why nested Go config needs an explicit map-in-the-middle; ties to [go-config](https://github.com/eSlider/go-config).
 
-Repo inventory and metrics: [**Projects**](/projects/) tab (**62** original repos on GitHub, **21** Go, **28** active in 2026).
+Repo inventory and metrics: [**Projects**](/projects/) tab. Engagements with project links: [**Clients**](/clients/).
 
 ---
 
