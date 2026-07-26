@@ -1,8 +1,8 @@
 ---
 title: "WhereGroup — Mapbender GIS Product (1M+ Users)"
 date: 2018-02-01 10:00:00 +0000
-categories: [Companies, Software Architectures]
-tags: [PHP, PostgreSQL, PostGIS, Mapbender, WebGIS, Geospatial, JavaScript]
+categories: [Companies, Clients, Software Architectures]
+tags: [PHP, PostgreSQL, PostGIS, Mapbender, WebGIS, Geospatial, JavaScript, WhereGroup, Clients]
 description: "Senior GIS developer on Mapbender — vis-ui.js, Digitizer, public-sector geoportals."
 ---
 

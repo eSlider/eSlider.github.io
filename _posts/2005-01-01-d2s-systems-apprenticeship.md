@@ -1,8 +1,8 @@
 ---
 title: "D2S/SYSTEMS — IT Apprenticeship (2001–2006)"
 date: 2005-01-01 10:00:00 +0000
-categories: [Companies, Programming]
-tags: [PHP, Flash, MySQL, LAMP, Apprenticeship]
+categories: [Companies, Clients, Programming]
+tags: [PHP, Flash, MySQL, LAMP, Apprenticeship, D2S, Clients]
 description: "Fachinformatiker apprenticeship at D2S/SYSTEMS GmbH — LAMP, D2S/CMS, König-Neurath, Mendel."
 ---
 

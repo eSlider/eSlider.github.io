@@ -1,8 +1,8 @@
 ---
 title: "Keynote SIGOS GmbH — Backend & Database Engineering (2012–2013)"
 date: 2013-01-15 10:00:00 +0000
-categories: [Companies, Programming]
-tags: [Java, PostgreSQL, Oracle, MySQL, SQL]
+categories: [Companies, Clients, Programming]
+tags: [Java, PostgreSQL, Oracle, MySQL, SQL, SIGOS, Clients]
 description: "Senior Software Developer — million-record RDBMS tuning, Java APIs, Tcl/Tk components."
 ---
 

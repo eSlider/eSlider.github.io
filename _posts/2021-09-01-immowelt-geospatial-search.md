@@ -1,8 +1,8 @@
 ---
 title: "Immowelt AG — Geospatial Search at 80M+ Addresses"
 date: 2021-09-01 10:00:00 +0000
-categories: [Companies, Data Engineering]
-tags: [Go, PostgreSQL, PostGIS, AWS, Vue.js, WebGIS, Geospatial, Microservices]
+categories: [Companies, Clients, Data Engineering]
+tags: [Go, PostgreSQL, PostGIS, AWS, Vue.js, WebGIS, Geospatial, Microservices, Immowelt, Clients]
 description: "Go geospatial backend, <20 ms responses, AWS serverless migration, Vue.js WebGIS."
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Dreamteam — HOCR & Document Processing Pipelines"
 date: 2023-06-01 10:00:00 +0000
-categories: [Companies, Data Engineering]
-tags: [Go, PHP, OCR, Docker, Healthcare]
+categories: [Companies, Clients, Data Engineering]
+tags: [Go, PHP, OCR, Docker, Healthcare, Dreamteam, Clients]
 description: "~200+ commits on HOCR content server, PDF generation, traffic analytics — client via produktor.io."
 ---
 

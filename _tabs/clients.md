@@ -1,4 +1,5 @@
 ---
+title: Clients
 icon: fas fa-handshake
 order: 3
 ---

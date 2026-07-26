@@ -1,8 +1,8 @@
 ---
 title: "Dyvenia — Senior Data Engineer (Python ETL & CRM Pipelines)"
 date: 2025-01-15 10:00:00 +0000
-categories: [Companies, Data Engineering]
-tags: [Python, FastAPI, PostgreSQL, dbt, Parquet, ETL, SQL, ARQ, HubSpot, Salesforce]
+categories: [Companies, Clients, Data Engineering]
+tags: [Python, FastAPI, PostgreSQL, dbt, Parquet, ETL, SQL, ARQ, HubSpot, Salesforce, Dyvenia, Clients]
 description: "Python data engineering on Atttiva/IDflow — FastAPI, ARQ workers, CRM consumers, dbt/Parquet ELT, 10M+ records, 99.9% quality."
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "GRID GmbH / GRIDFACTOR — 50+ Agency Client Deliveries (2006–2012)"
 date: 2012-06-01 10:00:00 +0000
-categories: [Companies, Programming]
-tags: [PHP, JavaScript, Linux, SQL, Flash]
+categories: [Companies, Clients, Programming]
+tags: [PHP, JavaScript, Linux, SQL, Flash, GRID, Clients]
 description: "Subcontractor for GRID agency (gridfactor.de) — PHP/MySQL microsites, Flash campaigns, VisCMS stack."
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Markets Platform — TradePlatform Backend at Scale"
 date: 2025-06-01 10:00:00 +0000
-categories: [Companies, Software Architectures]
-tags: [Go, React, Kafka, PostgreSQL, DuckDB, ClickHouse, Grafana, Microservices]
+categories: [Companies, Clients, Software Architectures]
+tags: [Go, React, Kafka, PostgreSQL, DuckDB, ClickHouse, Grafana, Microservices, Markets Platform, Clients]
 description: "~2,000+ commits on trading platform — consumers, APIs, React/MUI frontends."
 ---
 

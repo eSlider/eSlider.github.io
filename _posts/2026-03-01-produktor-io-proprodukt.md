@@ -1,8 +1,8 @@
 ---
 title: "ProProdukt SL / produktor.io — Own Company (2006–present)"
 date: 2026-03-01 10:00:00 +0000
-categories: [Companies, Software Architectures]
-tags: [Go, PHP, Kubernetes, Docker, Gitea, Ollama, Geospatial]
+categories: [Companies, Clients, Software Architectures]
+tags: [Go, PHP, Kubernetes, Docker, Gitea, Ollama, Geospatial, ProProdukt, Clients]
 description: "VisCreation (2006) → ProProdukt SL / produktor.io — geospatial web, e-commerce, self-hosted SaaS, AI infra."
 pin: true
 ---

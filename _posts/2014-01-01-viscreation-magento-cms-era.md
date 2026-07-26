@@ -1,8 +1,8 @@
 ---
 title: "VisCreation Era — VisCMS, Magento & Geo Stack (2006–2022)"
 date: 2014-01-01 10:00:00 +0000
-categories: [Companies, Programming]
-tags: [PHP, Magento, Geospatial, Go, Docker]
+categories: [Companies, Clients, Programming]
+tags: [PHP, Magento, Geospatial, Go, Docker, VisCreation, ProProdukt, Clients]
 description: "~1,900+ commits — VisBack/VisCMS, Magento shops, produktor.io geospatial line before current platform."
 ---
 

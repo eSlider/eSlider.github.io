@@ -1,8 +1,8 @@
 ---
 title: "Mapbender Digitizer — Spatial Editing Module for Public-Sector Geoportals"
 date: 2015-06-27 10:00:00 +0000
-categories: [Projects, Programming]
-tags: [PHP, JavaScript, Mapbender, WebGIS, Geospatial, PostGIS, PostgreSQL]
+categories: [Clients, Projects, Programming]
+tags: [PHP, JavaScript, Mapbender, WebGIS, Geospatial, PostGIS, PostgreSQL, WhereGroup, Clients]
 description: "YAML-configured browser editing for points, lines, polygons — 344 commits on mapbender-digitizer."
 mermaid: true
 ---

@@ -2,8 +2,8 @@
 title: "Edelweiss — Healthcare Knowledge Base & Federated Chat"
 date: 2026-06-25 10:00:00 +0000
 last_modified_at: 2026-06-30 16:00:00 +0000
-categories: [Projects, Software Architectures]
-tags: [Healthcare, Neo4j, Qdrant, Matrix, WebRTC, WebDAV, RAG]
+categories: [Clients, Projects, Software Architectures]
+tags: [Healthcare, Neo4j, Qdrant, Matrix, WebRTC, WebDAV, RAG, Edelweiss, Clients]
 description: "DemoCare / pflege knowledge-base tooling, go-second-brain, and federated Matrix homeservers for healthcare partners."
 pin: true
 mermaid: true

@@ -1,8 +1,8 @@
 ---
 title: "Matrix / WebRTC / VoIP — Production Video & Audio Stacks"
 date: 2026-06-25 10:00:00 +0000
-categories: [DevOps, Software Architectures]
-tags: [Matrix, WebRTC, LiveKit, Jitsi, coturn, Docker, Element, VoIP]
+categories: [Clients, DevOps, Software Architectures]
+tags: [Matrix, WebRTC, LiveKit, Jitsi, coturn, Docker, Element, VoIP, Edelweiss, Clients]
 description: "~2 years operating federated Matrix homeservers with coturn, LiveKit SFU, and on-prem Jitsi Meet across three organizations."
 pin: false
 ---

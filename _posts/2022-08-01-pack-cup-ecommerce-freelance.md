@@ -1,8 +1,8 @@
 ---
 title: "Pack und Cup GmbH — E-commerce Freelance (2016–2023)"
 date: 2022-08-01 10:00:00 +0000
-categories: [Companies, Programming]
-tags: [PHP, Docker, MySQL, E-commerce, Linux]
+categories: [Companies, Clients, Programming]
+tags: [PHP, Docker, MySQL, E-commerce, Linux, Pack und Cup, Clients]
 description: "~485 commits — PHP shop, CMS tooling, and Hetzner ops for Pack-Cup client (via ProProdukt SL)."
 ---
 

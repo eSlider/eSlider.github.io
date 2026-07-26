@@ -1,8 +1,8 @@
 ---
 title: "vis-ui.js — Web UI Generator for Mapbender"
 date: 2021-02-24 10:00:00 +0000
-categories: [Projects, Programming]
-tags: [JavaScript, Mapbender, WebGIS, Geospatial]
+categories: [Clients, Projects, Programming]
+tags: [JavaScript, Mapbender, WebGIS, Geospatial, WhereGroup, Clients]
 description: "Web UI generator adopted across Mapbender geoportal deployments."
 ---
 
