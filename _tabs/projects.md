@@ -25,6 +25,7 @@ Full profile: [github.com/eSlider](https://github.com/eSlider)
 
 | Project | Lang | Updated | Post |
 |---------|------|---------|------|
+| [swarm-house](https://git.produktor.io/eSlider/swarm-house) | Python / TS / infra | 2026-07 | [Drone swarm data platform](/posts/swarm-house-drone-data-platform/) |
 | [go-onlyoffice](https://github.com/eSlider/go-onlyoffice) | Go | 2026-06-24 | [`oo` CLI](/posts/go-onlyoffice-oo-cli/) |
 | [self-ca](https://github.com/eSlider/self-ca) | Go | 2026-06-21 | [Self-hosted CA](/posts/self-ca-private-certificates/) |
 | [go-second-brain](https://github.com/eSlider/go-second-brain) | Go | 2026-06-16 | [Knowledge Graph RAG](/posts/go-second-brain-knowledge-graph-rag/) |

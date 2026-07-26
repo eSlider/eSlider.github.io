@@ -18,6 +18,7 @@ Repo metrics and full OSS tables: [**Projects**](/projects/).
 | Client / org | Period | Role | Projects & writing |
 |--------------|--------|------|--------------------|
 | **Edelweiss** (healthcare) | 2025–present | Platform / Matrix / voice | [Knowledge base](/posts/edelweiss-healthcare-knowledge-base/) · [Video assistant MVP](/posts/edelweiss-video-assistant-mvp/) · [Matrix / WebRTC](/posts/matrix-webrtc-voip-production/) |
+| **Swarm House** | 2025–2026 | Platform / DevOps design (client undisclosed) | [Swarm House post](/posts/swarm-house-drone-data-platform/) · [git.produktor.io/eSlider/swarm-house](https://git.produktor.io/eSlider/swarm-house) |
 | **ProProdukt SL** / [produktor.io](https://produktor.io) | 2006–present | Own company | [Company story](/posts/produktor-io-proprodukt/) · [Platform stack](/posts/produktor-platform-self-hosted-stack/) · [inventar](https://github.com/eSlider/inventar) · [go-onlyoffice](https://github.com/eSlider/go-onlyoffice) · [go-second-brain](https://github.com/eSlider/go-second-brain) · [ai-fabric](https://github.com/eSlider/ai-fabric) |
 | **Markets Platform** | 2024–2025 | Contract backend | [TradePlatform](/posts/markets-platform-tradeplatform/) · [go-fdp](https://github.com/eSlider/go-fdp) · [go-trade](https://github.com/eSlider/go-trade) |
 | **Dyvenia** | 2023–2025 | Employee — data eng | [Python / dbt / CRM ETL](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/) |
