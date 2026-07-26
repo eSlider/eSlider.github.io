@@ -16,11 +16,23 @@ gh run watch -R eSlider/eSlider.github.io
 
 ### Fork note
 
-This repo was forked from `chirpy-starter`. If pushes do not trigger deploys, open
+This repo was forked from `chirpy-starter`. **Push to `main` often does not
+start Actions** (fork policy) — after merging content, redeploy manually:
+
+```bash
+gh workflow run "Build and Deploy" -R eSlider/eSlider.github.io --ref main
+gh run watch -R eSlider/eSlider.github.io
+```
+
+If Actions were never enabled, open
 [Actions](https://github.com/eSlider/eSlider.github.io/actions) once and click
 **“I understand my workflows, go ahead and enable them”**.
 
 A daily schedule (`06:00 UTC`) redeploys as a safety net.
+
+Archives / tags / categories are **generated from post front matter** (Chirpy
+`jekyll-archives`). Engagement posts use category `Clients` and org tags
+(`WhereGroup`, `Dyvenia`, …) so those indexes stay aligned with `/clients/`.
 
 ## Local preview
 

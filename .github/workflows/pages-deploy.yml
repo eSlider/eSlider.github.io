@@ -19,11 +19,12 @@ permissions:
   id-token: write
   actions: read
 
-# Serialize Pages deploys; do not cancel an in-flight deploy (rapid manual
-# re-runs were leaving the site on an older artifact).
+# Serialize Pages deploys. cancel-in-progress must be true: this Chirpy fork
+# sometimes leaves zombie "queued" runs that block the concurrency group forever
+# when cancel-in-progress is false (seen 2026-07).
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
