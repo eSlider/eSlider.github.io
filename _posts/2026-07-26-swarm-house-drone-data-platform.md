@@ -1,6 +1,6 @@
 ---
 title: "Swarm House — On-Prem Data Platform for Autonomous Drone Swarms"
-date: 2026-07-26 12:00:00 +0000
+date: 2026-07-26 08:00:00 +0000
 categories: [Clients, Projects, Software Architectures, DevOps]
 tags: [Docker, Parquet, DuckDB, Kubernetes, Terraform, Ansible, Python, TypeScript, MinIO, Clients, Swarm House]
 description: "Design and runnable PoC for an air-gapped drone-swarm data platform: Parquet/DuckDB, peer sync, ground warehouse, simulation."
