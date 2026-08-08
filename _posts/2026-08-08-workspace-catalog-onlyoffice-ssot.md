@@ -1,6 +1,6 @@
 ---
 title: "Workspace Catalog — Path↔Org↔OnlyOffice Index"
-date: 2026-08-08 10:00:00 +0000
+date: 2026-08-08 06:30:00 +0000
 categories: [DevOps, Software Architectures, Projects]
 tags: [OnlyOffice, Gitea, Inventar, Governance, Documentation, ProProdukt]
 description: "How laptop/8TB project trees map to orgs and OnlyOffice projects — business SSOT vs code SSOT, without publishing private CRM."

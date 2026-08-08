@@ -1,6 +1,6 @@
 ---
 title: "MomSwap — GeoJSON Collections with Ed25519 Auth"
-date: 2026-08-08 09:00:00 +0000
+date: 2026-08-08 06:00:00 +0000
 categories: [Clients, Projects, Software Architectures]
 tags: [Go, GeoJSON, Ed25519, MinIO, Vue, Geospatial, Clients, ProProdukt]
 description: "User-owned GeoJSON feature collections — Ed25519 challenge-response auth, invitation onboarding, MinIO assets, static Vue frontend."
