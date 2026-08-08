@@ -6,12 +6,12 @@ order: 2
 
 ## GitHub Portfolio
 
-Snapshot from **`gh repo list eSlider`** — **2026-06-24** (refreshed via `gh`)
+Snapshot from **`gh repo list eSlider`** — **2026-08-08** (refreshed via `gh`)
 
 | Metric | Value |
 |--------|------:|
 | Original repos (`isFork: false`) | **62** |
-| Public | **56** · Private **6** |
+| Public | **57** · Private **5** |
 | Active in 2026 | **28** |
 | Primary language: Go | **21** repos |
 
@@ -25,24 +25,26 @@ Full profile: [github.com/eSlider](https://github.com/eSlider)
 
 | Project | Lang | Updated | Post |
 |---------|------|---------|------|
+| [MomSwap](https://git.produktor.io/momswap/backend) | Go / Vue | 2026-08 | [GeoJSON + Ed25519](/posts/momswap-geojson-ed25519/) |
+| Workspace catalog / OO SSOT | YAML / Go tooling | 2026-08 | [Path↔org↔OnlyOffice](/posts/workspace-catalog-onlyoffice-ssot/) |
 | [swarm-house](https://git.produktor.io/eSlider/swarm-house) | Python / TS / infra | 2026-07 | [Drone swarm data platform](/posts/swarm-house-drone-data-platform/) |
-| [go-onlyoffice](https://github.com/eSlider/go-onlyoffice) | Go | 2026-06-24 | [`oo` CLI](/posts/go-onlyoffice-oo-cli/) |
+| [go-onlyoffice](https://github.com/eSlider/go-onlyoffice) | Go | 2026-08-06 | [`oo` CLI](/posts/go-onlyoffice-oo-cli/) |
 | [self-ca](https://github.com/eSlider/self-ca) | Go | 2026-06-21 | [Self-hosted CA](/posts/self-ca-private-certificates/) |
 | [go-second-brain](https://github.com/eSlider/go-second-brain) | Go | 2026-06-16 | [Knowledge Graph RAG](/posts/go-second-brain-knowledge-graph-rag/) |
 | Matrix / WebRTC / VoIP (produktor chat) | Docker | 2024–present | [Video assistant MVP](/posts/edelweiss-video-assistant-mvp/) |
 | [go-hocr](https://github.com/eSlider/go-hocr) | Go | 2026-06-15 | [hOCR parser](/posts/go-hocr-tesseract-parser/) |
 | [ai-fabric](https://github.com/eSlider/ai-fabric) | Go | 2026-06-14 | [Agent delivery](/posts/ai-fabric-agent-delivery/) |
-| [go-fdp](https://github.com/eSlider/go-fdp) / [go-trade](https://github.com/eSlider/go-trade) | Go | 2026-05-27 | [Finance data proxy](/posts/go-fdp-finance-data-proxy/) |
+| [go-fdp](https://github.com/eSlider/go-fdp) / [go-trade](https://github.com/eSlider/go-trade) | Go | 2026-07-29 | [Finance data proxy](/posts/go-fdp-finance-data-proxy/) |
 | [go-config](https://github.com/eSlider/go-config) | Go | 2026-05-12 | [Config essay (2026-05-02)](/posts/go-config-many-good-pieces-no-whole-picture/) · [Medium](https://medium.com/@andreyoblivantsev/go-config-many-good-pieces-no-whole-picture-039ec77193be) |
 | [yamd](https://github.com/eSlider/yamd) | JS | 2026-06-17 | [MD+YAML static engine](/posts/yamd-markdown-yaml-engine/) |
 | [bonsai-ollama](https://github.com/eSlider/bonsai-ollama) | Go | 2026-04-22 | [Q1_0 Ollama proxy](/posts/bonsai-ollama-q1-proxy/) |
 | [go-ollama](https://github.com/eSlider/go-ollama) | Go | 2026-04-17 | [Go libraries toolkit](/posts/go-libraries-toolkit/) |
 | [nominatim](https://github.com/eSlider/nominatim) | Shell | 2026-03-02 | [Geocoder deploy](/posts/nominatim-geocoder-deploy/) |
-| [inventar / docs](https://github.com/eSlider/inventar) | — | 2026-04 | [ADR governance](/posts/inventar-docs-governance/) |
+| [inventar / docs](https://github.com/eSlider/inventar) | — | 2026-08 | [ADR governance](/posts/inventar-docs-governance/) · [Workspace catalog](/posts/workspace-catalog-onlyoffice-ssot/) |
 | [mail-archive](https://github.com/eSlider/mail-archive) | Go | 2026-02-15 | [Mail archive](/posts/mail-archive-imap-search/) |
 | [geo-spider-app](https://github.com/eSlider/geo-spider-app) | KMP | 2026-01-04 | [Android GPS tracker](/posts/geo-spider-app-android-gps/) |
 | webdav-sharing (private repo) | Docker | 2026-03 | [SFTPGo + MinIO WebDAV](/posts/webdav-sharing-sftpgo-minio/) |
-| [go-matrix-bot](https://github.com/eSlider/go-matrix-bot) | Go | 2026-02 | [Matrix bot integrations](/posts/go-matrix-bot-matrix-integrations/) |
+| [go-matrix-bot](https://github.com/eSlider/go-matrix-bot) | Go | 2026-07-15 | [Matrix bot integrations](/posts/go-matrix-bot-matrix-integrations/) |
 
 ---
 

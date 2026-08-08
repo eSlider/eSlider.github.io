@@ -30,7 +30,9 @@ Cross-repo **governance** and architecture documentation: **ASR/ADR inventar** (
 
 Pairs with [self-hosted AI delivery](/posts/self-hosted-ai-delivery-fabric/) and [Docker Compose patterns](/posts/docker-compose-stack-patterns/) as the documentation layer behind multi-repo platform work.
 
+Operational follow-up (2026): [Workspace catalog — path↔org↔OnlyOffice](/posts/workspace-catalog-onlyoffice-ssot/) describes how the laptop/8TB tree is indexed without publishing private CRM.
+
 ## Related
 
-[produktor.io](/posts/produktor-io-proprodukt/) · [AI Fabric](/posts/ai-fabric-agent-delivery/)
+[produktor.io](/posts/produktor-io-proprodukt/) · [AI Fabric](/posts/ai-fabric-agent-delivery/) · [Workspace catalog](/posts/workspace-catalog-onlyoffice-ssot/)
 
