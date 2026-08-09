@@ -12,9 +12,11 @@ description: "Senior GIS developer on Mapbender — vis-ui.js, Digitizer, public
 
 ## Highlights
 
-- Delivered spatial data solutions for public-sector clients serving **1M+ users**
+- Delivered spatial data solutions for public-sector **clients** (employer: WhereGroup) serving **1M+ users**
 - Built **vis-ui.js** and **[Digitizer](/posts/mapbender-digitizer-module/)** — adopted across Mapbender deployments
 - Contributed to `mapbender/*` and `WhereGroup/*` OSS repos (print, search, layersets, SpatiaLite)
+- **Products** under WhereGroup: Mapbender core, Meldemax (Mapbender-based PoC), tooling (routing, Solr, SpatiaLite, …)
+- **Client deliveries** (examples): Deutsche Bahn FLIMAS (DB S Immobilien), EBW Mapbender, municipal geoportals (Frankfurt, Rostock, RVR, …)
 
 ## Key modules
 
@@ -23,8 +25,10 @@ description: "Senior GIS developer on Mapbender — vis-ui.js, Digitizer, public
 | [mapbender-digitizer](/posts/mapbender-digitizer-module/) | Spatial editing module (**344** commits) |
 | mapbender-print | Print module (~457 commits) |
 | mapbender-starter-search | Search integration (~399 commits) |
-| dbsimm-flimas | Client deployment (Solr, Symfony) |
+| dbsimm-flimas | Deutsche Bahn GIS / FLIMAS (Solr, Symfony) |
+| ebw-mapbender | EBW client Mapbender |
 | frankfurt-geoportal | Frankfurt geoportal |
+| meldemax | WhereGroup product (Mapbender PoC) |
 
 ## GitHub activity
 

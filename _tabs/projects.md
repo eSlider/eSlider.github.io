@@ -26,9 +26,8 @@ Full profile: [github.com/eSlider](https://github.com/eSlider)
 | Project | Lang | Updated | Post |
 |---------|------|---------|------|
 | [MomSwap](https://git.produktor.io/momswap/backend) | Go / Vue | 2026-08 | [GeoJSON + Ed25519](/posts/momswap-geojson-ed25519/) |
-| Workspace catalog / OO SSOT | YAML / Go tooling | 2026-08 | [Path↔org↔OnlyOffice](/posts/workspace-catalog-onlyoffice-ssot/) |
-| [swarm-house](https://git.produktor.io/eSlider/swarm-house) | Python / TS / infra | 2026-07 | [Drone swarm data platform](/posts/swarm-house-drone-data-platform/) |
-| [go-onlyoffice](https://github.com/eSlider/go-onlyoffice) | Go | 2026-08-06 | [`oo` CLI](/posts/go-onlyoffice-oo-cli/) |
+| [go-onlyoffice](https://github.com/eSlider/go-onlyoffice) | Go | 2026-08 | [`oo` CLI](/posts/go-onlyoffice-oo-cli/) · [associations](/posts/onlyoffice-association-graph/) |
+| Workspace catalog / OO SSOT | YAML / Go tooling | 2026-08 | [Path↔org↔OnlyOffice](/posts/workspace-catalog-onlyoffice-ssot/) · [Association graph](/posts/onlyoffice-association-graph/) |
 | [self-ca](https://github.com/eSlider/self-ca) | Go | 2026-06-21 | [Self-hosted CA](/posts/self-ca-private-certificates/) |
 | [go-second-brain](https://github.com/eSlider/go-second-brain) | Go | 2026-06-16 | [Knowledge Graph RAG](/posts/go-second-brain-knowledge-graph-rag/) |
 | Matrix / WebRTC / VoIP (produktor chat) | Docker | 2024–present | [Video assistant MVP](/posts/edelweiss-video-assistant-mvp/) |
@@ -107,14 +106,14 @@ See the dedicated **[Clients](/clients/)** tab for engagements with project and 
 | Engagement | Period | Post |
 |------------|--------|------|
 | Pack und Cup GmbH (freelance) | 2016–2023 | [E-commerce client](/posts/pack-cup-ecommerce-freelance/) |
-| ProProdukt SL / produktor.io | 2006–present | [Own company](/posts/produktor-io-proprodukt/) · [Platform stack](/posts/produktor-platform-self-hosted-stack/) |
+| ProProdukt SL / Produktor™ | 2006–present | [Own company (owner)](/posts/produktor-io-proprodukt/) · [Platform](/posts/produktor-platform-self-hosted-stack/) · [OO graph](/posts/onlyoffice-association-graph/) |
 | Edelweiss (healthcare) | 2025–present | [Knowledge base](/posts/edelweiss-healthcare-knowledge-base/) — [federation](/posts/edelweiss-healthcare-knowledge-base/#what-federated-matrix-chat-means) · [failover](/posts/edelweiss-healthcare-knowledge-base/#failover-when-a-homeserver-is-down) · [Video assistant MVP](/posts/edelweiss-video-assistant-mvp/) |
 | Markets Platform | 2024–2025 | [TradePlatform](/posts/markets-platform-tradeplatform/) |
 | Dyvenia | 2023–2025 | [Python data engineering](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/) |
 | Immowelt AG | 2019–2021 | [Geospatial search](/posts/immowelt-geospatial-search/) |
 | WhereGroup / Mapbender | 2014–2018 | [GIS product](/posts/wheregroup-mapbender-gis/) · [Clients](/clients/) |
 | Keynote SIGOS | 2012–2013 | [Backend / RDBMS](/posts/keynote-sigos-backend-databases/) |
-| Dreamteam (client) | 2022–2023 | [HOCR pipelines](/posts/dreamteam-hocr-pipelines/) |
+| Dreamteam (client) | 2022–2023 | [hOCR product + pipelines](/posts/dreamteam-hocr-pipelines/) |
 | VisCreation era | 2006–2022 | [VisCMS / Magento](/posts/viscreation-magento-cms-era/) |
 | D2S/SYSTEMS apprenticeship | 2001–2006 | [IT apprenticeship](/posts/d2s-systems-apprenticeship/) · [d2s-systems.com](https://www.d2s-systems.com/) |
 | GRID GmbH | 2006–2012 | [CMS clients](/posts/grid-gmbh-cms-clients/) · [gridfactor.de](https://gridfactor.de/) |

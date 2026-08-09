@@ -8,19 +8,24 @@ description: "Go client and CLI for OnlyOffice Project Management API with appli
 
 Go client library and **`oo` CLI** for the OnlyOffice Project Management API — projects, tasks, milestones, calendar, and CRM (companies, contacts, deals).
 
-**Repository**: [github.com/eSlider/go-onlyoffice](https://github.com/eSlider/go-onlyoffice) · last push **2026-06-24** (Gitea sync, subject-based CLI in v0.5)
+**Repository**: [github.com/eSlider/go-onlyoffice](https://github.com/eSlider/go-onlyoffice) · active **2026-08** (CRM associations, `oo persons update`, Projects contacts)
 
 ## Features
 
-- Project / task / milestone CRUD
+- Project / task / milestone CRUD · Documents folder helpers
 - Calendar event management
-- CRM entities and opportunity pipeline
-- `oo applications sync` — sync structured application folders to OnlyOffice CRM
-- Pairs with Gitea issue sync for executive reporting and Gantt views
+- CRM: companies, persons (`create` / **`update`**), merge, dedupe, tags
+- Project **Contacts** (CRM) vs Team (portal users) — see [association graph](/posts/onlyoffice-association-graph/)
+- `oo applications sync` — application folders → CRM
+- Pairs with Gitea for executive reporting
+
+## Caveat (person update)
+
+OnlyOffice **ignores** `companyId` / `about` on form-encoded person PUT. The library uses **JSON** PUT and re-fetches so `oo persons update` matches the portal.
 
 ## Use case
 
-Built to support a structured job-application workflow: each application folder maps to CRM company, recruiter contact, and deal stage — keeping outreach and interview prep in one system alongside project tasks and calendar slots.
+Job-application folders → CRM company + contact + deal; engagement hubs per employer / own company; client vs product naming on Projects.
 
 ## Tech stack
 

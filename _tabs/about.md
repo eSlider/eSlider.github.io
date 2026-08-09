@@ -18,7 +18,7 @@ Software since **2001** (IT apprenticeship in Nuremberg); **20+ years** shipping
 
 ## Now (2025–2026)
 
-Freelance via **[ProProdukt SL](https://eslider.github.io/posts/produktor-io-proprodukt/)** — own company, parallel to employment history above. Current build focus:
+**Owner** of **[ProProdukt SL](https://eslider.github.io/posts/produktor-io-proprodukt/)** (Tenerife). **Produktor** / [produktor.io](https://produktor.io) is the company trade mark — platform and freelance delivery under that brand, parallel to employment history above. Current build focus:
 
 | Area | What | Read more |
 |------|------|-----------|
@@ -38,16 +38,17 @@ Repo inventory and metrics: [**Projects**](/projects/) tab. Engagements with pro
 
 | Period | Engagement | Focus | Story |
 |--------|------------|-------|-------|
-| 2025–present | **Freelance** (ProProdukt SL) | Graph RAG, WebRTC, agents, trading | [produktor.io](/posts/produktor-io-proprodukt/) |
+| 2006–present | **ProProdukt SL** (owner) | Produktor™ / VisCreation → produktor.io — RAG, WebRTC, agents, ops | [produktor.io](/posts/produktor-io-proprodukt/) · [VisCreation era](/posts/viscreation-magento-cms-era/) |
 | 2024–2025 | **Markets Platform** (contract) | TradePlatform backend (~2k commits) | [Markets Platform](/posts/markets-platform-tradeplatform/) |
 | 2023–2025 | **Dyvenia** (employee) | **Python** ETL — Atttiva/IDflow, FastAPI, dbt, CRM pipelines | [Dyvenia](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/) |
 | 2019–2021 | **Immowelt AG** (employee) | Go geosearch 80M+ addresses, AWS serverless | [Immowelt](/posts/immowelt-geospatial-search/) |
 | 2014–2018 | **WhereGroup** (employee) | **Mapbender** product — Digitizer, 1M+ users | [WhereGroup](/posts/wheregroup-mapbender-gis/) |
 | 2012–2013 | **Keynote SIGOS** (employee) | Java, Oracle/MySQL/PostgreSQL backends | [SIGOS](/posts/keynote-sigos-backend-databases/) |
 | 2006–2012 | **GRID** subcontractor | PHP/CMS via VisBack/VisCMS — 50+ client sites | [GRID](/posts/grid-gmbh-cms-clients/) · [gridfactor.de](https://gridfactor.de/) |
-| 2006–present | **ProProdukt SL** (own company) | VisCreation → produktor.io — always parallel | [VisCreation era](/posts/viscreation-magento-cms-era/) |
 
-Other client work: [Pack und Cup](/posts/pack-cup-ecommerce-freelance/) (2016–2023) · [Dreamteam HOCR](/posts/dreamteam-hocr-pipelines/) (2022–2023) · [Edelweiss healthcare](/posts/edelweiss-healthcare-knowledge-base/) (2025–present).
+Other client work: [Pack und Cup](/posts/pack-cup-ecommerce-freelance/) (2016–2023) · [Dreamteam — hOCR product + pipelines](/posts/dreamteam-hocr-pipelines/) (2022–2023) · [Edelweiss healthcare](/posts/edelweiss-healthcare-knowledge-base/) (2025–present).
+
+Business SSOT for engagements is OnlyOffice CRM + Projects ([association note](/posts/onlyoffice-association-graph/)); code on [git.produktor.io](https://git.produktor.io).
 
 ---
 

@@ -1,24 +1,24 @@
 ---
-title: "Dreamteam — HOCR & Document Processing Pipelines"
+title: "Dreamteam — hOCR Product & Document Pipelines"
 date: 2023-06-01 10:00:00 +0000
 categories: [Companies, Clients, Data Engineering]
 tags: [Go, PHP, OCR, Docker, Healthcare, Dreamteam, Clients]
-description: "~200+ commits on HOCR content server, PDF generation, traffic analytics — client via produktor.io."
+description: "My hOCR product delivered for Dreamteam — pipelines/devops, Content Serve, Storyflash, TrafficDesk, DPO."
 ---
 
 **Dreamteam** · 2022–2023  
-**Role**: Client work delivered via **ProProdukt SL / produktor.io** (not a separate employer)
+**Role**: Client engagement via **ProProdukt SL** — **hOCR** is my product; Dreamteam was the delivery context (pipelines / devops), not a separate employer.
 
 ## Summary
 
-~200+ author commits on document/OCR and traffic-analytics tooling — precursor to **[go-hocr](https://github.com/eSlider/go-hocr)** and AI document workflows.
+~200+ author commits on document/OCR and related client products. Public library **[go-hocr](https://github.com/eSlider/go-hocr)**; engagement story on this site under Dreamteam; product leaf also tracked with Content Serve in the internal OnlyOffice graph.
 
 ## Key repositories
 
 | Repository | Commits | Focus |
 |------------|--------:|-------|
-| content-serve-hocr | ~96 | HOCR content server |
-| hocr | ~72 | HOCR pipeline |
+| content-serve / hocr | ~96 | HOCR content server (client product) |
+| hocr / pipelines | ~72 | HOCR pipeline + devops |
 | dpo | ~75 | Data protection tooling |
 | storyflash | ~36 | Storyflash product |
 | trafficdesk | ~25 | Traffic analytics |
