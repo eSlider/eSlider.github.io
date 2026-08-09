@@ -2,12 +2,12 @@
 title: "OnlyOffice Association Graph — Company ↔ Person ↔ Project"
 date: 2026-08-09 08:00:00 +0000
 categories: [DevOps, Software Architectures, Projects]
-tags: [OnlyOffice, Gitea, Inventar, Governance, Documentation, ProProdukt]
-description: "How ProProdukt / Produktor, Dreamteam hOCR, and WhereGroup client vs product lines are modelled in OnlyOffice — Team ≠ Contacts."
+tags: [OnlyOffice, Gitea, Inventar, Governance, Documentation]
+description: "How Dreamteam hOCR and WhereGroup client vs product lines are modelled in OnlyOffice — Team ≠ Contacts."
 ---
 
-**Platform ops** · ProProdukt SL · 2026-08  
-**Related**: [Workspace catalog](/posts/workspace-catalog-onlyoffice-ssot/) · [go-onlyoffice](/posts/go-onlyoffice-oo-cli/) · [Produktor company](/posts/produktor-io-proprodukt/)
+**Platform ops** · 2026-08  
+**Related**: [Workspace catalog](/posts/workspace-catalog-onlyoffice-ssot/) · [go-onlyoffice](/posts/go-onlyoffice-oo-cli/)
 
 OnlyOffice is the **business SSOT** for companies, people, and engagement projects. After consolidating the workstation catalog, the next pass was cleaning **associations** so titles and CRM contacts match reality.
 
@@ -19,15 +19,6 @@ OnlyOffice is the **business SSOT** for companies, people, and engagement projec
 | Project **Contacts** | CRM companies + persons — the career/business graph |
 
 Looking at Team and wondering where the client went is the usual trap.
-
-## Own company
-
-| CRM | Meaning |
-|-----|---------|
-| **ProProdukt SL** | Legal entity — I am **Owner** |
-| **Produktor.io** | Trade mark / brand of ProProdukt SL |
-
-Hub project titles use `ProProdukt SL | Produktor` so the legal entity and brand stay linked.
 
 ## Dreamteam
 
