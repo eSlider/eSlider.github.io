@@ -25,6 +25,7 @@ Full profile: [github.com/eSlider](https://github.com/eSlider)
 
 | Project | Lang | Updated | Post |
 |---------|------|---------|------|
+| [edelweiss-ui](https://git.produktor.io/edelweiss/edelweiss-ui) | Go / Vue | 2026-08 | [Fahrplan map](/posts/edelweiss-ui-fahrplan-map/) |
 | [MomSwap](https://git.produktor.io/momswap/backend) | Go / Vue | 2026-08 | [GeoJSON + Ed25519](/posts/momswap-geojson-ed25519/) |
 | [go-onlyoffice](https://github.com/eSlider/go-onlyoffice) | Go | 2026-08 | [`oo` CLI](/posts/go-onlyoffice-oo-cli/) · [associations](/posts/onlyoffice-association-graph/) |
 | Workspace catalog / OO SSOT | YAML / Go tooling | 2026-08 | [Path↔org↔OnlyOffice](/posts/workspace-catalog-onlyoffice-ssot/) · [Association graph](/posts/onlyoffice-association-graph/) |
@@ -107,7 +108,7 @@ See the dedicated **[Clients](/clients/)** tab for engagements with project and 
 |------------|--------|------|
 | Pack und Cup GmbH (freelance) | 2016–2023 | [E-commerce client](/posts/pack-cup-ecommerce-freelance/) |
 | ProProdukt SL / Produktor™ | 2006–present | [Own company (owner)](/posts/produktor-io-proprodukt/) · [Platform](/posts/produktor-platform-self-hosted-stack/) · [OO graph](/posts/onlyoffice-association-graph/) |
-| Edelweiss (healthcare) | 2025–present | [Knowledge base](/posts/edelweiss-healthcare-knowledge-base/) — [federation](/posts/edelweiss-healthcare-knowledge-base/#what-federated-matrix-chat-means) · [failover](/posts/edelweiss-healthcare-knowledge-base/#failover-when-a-homeserver-is-down) · [Video assistant MVP](/posts/edelweiss-video-assistant-mvp/) |
+| Edelweiss (healthcare) | 2025–present | [Knowledge base](/posts/edelweiss-healthcare-knowledge-base/) — [federation](/posts/edelweiss-healthcare-knowledge-base/#what-federated-matrix-chat-means) · [failover](/posts/edelweiss-healthcare-knowledge-base/#failover-when-a-homeserver-is-down) · [Video assistant MVP](/posts/edelweiss-video-assistant-mvp/) · [Fahrplan map (edelweiss-ui)](/posts/edelweiss-ui-fahrplan-map/) |
 | Markets Platform | 2024–2025 | [TradePlatform](/posts/markets-platform-tradeplatform/) |
 | Dyvenia | 2023–2025 | [Python data engineering](/posts/dyvenia-data-engineering/) · [dyvenia.com](https://dyvenia.com/) |
 | Immowelt AG | 2019–2021 | [Geospatial search](/posts/immowelt-geospatial-search/) |

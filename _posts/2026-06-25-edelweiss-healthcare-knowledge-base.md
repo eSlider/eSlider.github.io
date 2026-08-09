@@ -14,7 +14,7 @@ mermaid: true
 
 ## Summary
 
-**Edelweiss** combines a **go-second-brain** stack (Markdown → **Neo4j** + **Qdrant** → Matrix RAG bot), **WebDAV** document sharing ([SFTPGo + MinIO](/posts/webdav-sharing-sftpgo-minio/)), CuraSoft integration paths, and **federated Matrix** homeservers so pflege partners keep their own data while still sharing rooms and calls.
+**Edelweiss** combines a **go-second-brain** stack (Markdown → **Neo4j** + **Qdrant** → Matrix RAG bot), **WebDAV** document sharing ([SFTPGo + MinIO](/posts/webdav-sharing-sftpgo-minio/)), CuraSoft integration paths, the **[edelweiss-ui Fahrplan map](/posts/edelweiss-ui-fahrplan-map/)** (phone-first daily routes), and **federated Matrix** homeservers so pflege partners keep their own data while still sharing rooms and calls.
 
 **On this page**: [platform architecture](#platform-architecture) · [what federation means](#what-federated-matrix-chat-means) · [federation topology](#federation-topology-three-homeservers) · [use cases](#use-cases) · [failover](#failover-when-a-homeserver-is-down) · [offline & degraded modes](#offline-and-degraded-edge-cases) · [video assistant](#video-assistant-mvp)
 
